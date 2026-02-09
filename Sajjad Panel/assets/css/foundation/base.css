@@ -1,0 +1,131 @@
+
+/* ================================
+   IRANSansX FaNum Font Family
+   ================================ */
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  src: url('../../fonts/IRANSansXFaNum-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* ===========================
+   FOUNDATION RESET
+=========================== */
+
+.sj-app {
+  box-sizing: border-box;
+  font-family: 'IRANSansX', system-ui, sans-serif;
+}
+
+.sj-app *,
+.sj-app *::before,
+.sj-app *::after {
+  box-sizing: inherit;
+}
+
+
+.sj-app h1,
+.sj-app h2,
+.sj-app h3,
+.sj-app h4,
+.sj-app h5,
+.sj-app h6,
+.sj-app p,
+.sj-app ul,
+.sj-app ol,
+.sj-app figure {
+  margin: 0;
+}
+
+
+.sj-app ul,
+.sj-app ol {
+  padding: 0;
+  list-style: none;
+}
+
+
+.sj-app a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.sj-app input,
+.sj-app button,
+.sj-app select,
+.sj-app textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0;
+}

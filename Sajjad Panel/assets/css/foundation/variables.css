@@ -1,0 +1,80 @@
+/* =====================================
+   Sajjad Panel – Design Tokens
+   Source: Design System Document
+===================================== */
+
+.sj-app {
+
+  /* =========================
+     Brand / Primary Colors
+  ========================== */
+
+  --sj-color-primary-50:  #2560A6;
+  --sj-color-primary-100: #2560A6;
+  --sj-color-primary-200: #2560A6;
+  --sj-color-primary-300: #2560A6;
+  --sj-color-primary-400: #2560A6;
+  --sj-color-primary-500: #2560A6; 
+  --sj-color-primary-600: #2560A6;
+  --sj-color-primary-700: #2560A6;
+  --sj-color-primary-800: #2560A6;
+  --sj-color-primary-900: #2560A6;
+
+
+  /* =========================
+     Neutral / Gray Scale
+  ========================== */
+  --sj-color-neutral-100: #EBECF0;
+  --sj-color-neutral-200: #AE93BD;
+  --sj-color-neutral-600: #B6AABE;
+  --sj-color-neutral-700: #685870;
+  --sj-color-neutral-900: #0F111A;
+
+
+  /* =========================
+     Semantic Text Colors
+  ========================== */
+
+  --sj-text-primary: var(--sj-color-neutral-900);
+  --sj-text-secondary: var(--sj-color-neutral-700);
+  --sj-text-muted: var(--sj-color-neutral-600);
+  --sj-text-inverse: var(--sj-color-neutral-100);
+  --sj-text-link: var(--sj-color-primary-600);
+
+
+  /* =========================
+     Background Colors
+  ========================== */
+
+  --sj-bg-page: var(--sj-color-primary-500);
+  --sj-bg-card: var(--sj-color-neutral-100);
+  --sj-bg-input: var(--sj-color-neutral-100);
+  --sj-bg-divider: var(--sj-color-neutral-200);
+
+
+  /* =========================
+     Border Colors
+  ========================== */
+
+  --sj-border-default: var(--sj-color-neutral-200);
+  --sj-border-muted: var(--sj-color-neutral-200);
+  --sj-border-focus: var(--sj-color-primary-200);
+
+
+  /* =========================
+     Action / CTA
+  ========================== */
+
+  --sj-cta-primary-bg: var(--sj-color-primary-500);
+  --sj-cta-primary-bg-hover: var(--sj-color-primary-800);
+  --sj-cta-primary-text: var(--sj-color-neutral-700);
+
+
+  /* =========================
+     Status Colors
+  ========================== */
+
+  --sj-color-success: #00C399; /* Teal 500 */
+  --sj-color-warning: #FF9900; /* Amber 500 */
+  --sj-color-error:   #FF2B2B; /* Red 500 */
+}

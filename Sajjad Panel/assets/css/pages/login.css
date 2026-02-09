@@ -1,0 +1,648 @@
+/* ====== MOBILE ====== */
+.login-page {
+  height: 100%;
+  background-color: var(--sj-bg-page);
+  position: relative;
+  overflow: hidden;
+
+}
+
+.login-page .row {
+  min-height: 100vh;
+}
+
+.login-card {
+  position: relative;
+  background-color: var(--sj-bg-card);
+  border-radius: 16px;
+  margin-top: 176px;
+  margin-bottom: 48px;
+  height: calc(100vh - 176px - 48px);
+  z-index: 5;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px;
+}
+
+/* Art Work */
+.artwork-wrapper {
+  position: relative;
+}
+
+
+.artwork-box {
+  display: none;
+
+}
+
+.artwork-box-inside {
+  display: none;
+}
+
+.artwork-decoration {
+  width: 486px;
+  position: absolute;
+  z-index: 1;
+  top: -96px;
+  right: -4%;
+  pointer-events: none;
+}
+
+.artwork-foreground {
+  width: 486px;
+  position: absolute;
+  z-index: 3;
+  bottom: -332px;
+  right: -4%;
+  pointer-events: none;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  z-index: 3;
+  left: 8%;
+  top: 40px;
+}
+
+.login-header {
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.login-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--sj-color-neutral-900);
+}
+
+/* wrapper فاصله بین input ها */
+.auth-input-group {
+  margin-bottom: 12px;
+}
+
+/* کل باکس input */
+.auth-input {
+  height: 40px;
+  background-color: #EBECF0;
+  border: 1px solid #AE93BD;
+  border-radius: 8px;
+  overflow: hidden;
+  /* خیلی مهم */
+}
+
+/* حذف border داخلی bootstrap */
+.auth-input .form-control,
+.auth-input .input-group-text {
+  border: none;
+  background-color: transparent;
+}
+
+/* input */
+.auth-input .form-control {
+  height: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  padding: 0;
+}
+
+/* placeholder */
+.auth-input .form-control::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  color: #685870;
+}
+
+/* آیکون‌ها */
+.auth-input .input-group-text {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button eye */
+.auth-input button.input-group-text {
+  cursor: pointer;
+}
+
+/* فوکوس */
+.auth-input .form-control:focus {
+  box-shadow: none;
+}
+
+.forgot-password-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E7999 !important;
+  text-decoration: underline !important;
+}
+
+.btn-login {
+  height: 48px;
+  border-radius: 8px !important;
+  background-color: #2560A6;
+  border: 1px solid #85A1EE;
+  color: #EBECF0;
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0;
+}
+
+.btn-login:hover {
+  color: #EBECF0;
+}
+
+.forgot-password-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E7999 !important;
+  text-decoration: underline !important;
+}
+
+/* ===== Mock Captcha ===== */
+
+.mock-captcha {
+  width: 100%;
+  height: 72px;
+  margin-bottom: 24px;
+  background-color: #EBECF0;
+  border: 1px solid #AE93BD;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px 0 16px;
+}
+
+/* سمت متن و چک‌باکس */
+.mock-captcha-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* چک‌باکس */
+.mock-checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: #EDEEF2;
+  border: 1px solid #AE93BD;
+  border-radius: 4px;
+}
+
+/* متن */
+.mock-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0F111A;
+  line-height: 1;
+}
+
+/* تصویر reCAPTCHA */
+.mock-captcha-right img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0 16px 0
+    /* فاصله بالا و پایین */
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #AE93BD;
+}
+
+.or-divider span {
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E7999;
+  line-height: 1;
+}
+
+/* ====== Action Buttons (مثل input ولی button) ====== */
+
+.auth-action-btn {
+  width: 100%;
+  height: 40px;
+  color: #685870;
+  background-color: #EBECF0;
+  border: 1px solid #AE93BD;
+  border-radius: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* متن دکمه */
+.auth-action-btn .action-text {
+  width: 100%;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 400;
+
+  line-height: 1;
+  word-spacing: -1.5px;
+}
+
+/* آیکن */
+.auth-action-btn .action-icon {
+  display: relative;
+  right: 8px;
+}
+
+.auth-action-btn .action-icon img {
+  width: 26px;
+  height: 26px;
+}
+
+/* hover */
+.auth-action-btn:hover {
+  background-color: #E4E6EC;
+  border-color: #9B7FB8;
+}
+
+/* focus (دسترسی‌پذیری) */
+.auth-action-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(174, 147, 189, 0.3);
+}
+
+/* active */
+.auth-action-btn:active {
+  transform: translateY(1px);
+}
+
+/* ====== TABLET ====== */
+@media (min-width: 577px) and (max-width: 991px) {
+
+  /* Form */
+  .login-card {
+    height: calc(100vh - 240px - 48px);
+    border-radius: 16px;
+    position: relative;
+    z-index: 5;
+    padding: 32px;
+  }
+
+  .auth-input {
+    height: 48px;
+  }
+
+  .artwork-decoration {
+    width: 620px;
+    top: -148px;
+    right: 0%;
+  }
+
+  .artwork-foreground {
+    width: 620px;
+    z-index: 3;
+    bottom: -408px;
+    right: 0%;
+  }
+
+  .logo {
+    width: 140px;
+    left: 8%;
+    top: 40px;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  /* input */
+  .auth-input .form-control {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  /* placeholder */
+  .auth-input .form-control::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .forgot-password-link {
+    font-size: 14px;
+  }
+
+  .mock-text {
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 15px !important;
+  }
+
+  .or-divider span {
+    font-size: 14px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    align-items: center;
+    font-size: 14px;
+
+  }
+
+  .auth-action-btn {
+    height: 48px;
+  }
+
+  .auth-action-btn .action-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-login {
+    height: 56px;
+  }
+
+}
+
+/* ====== DESKTOP ====== */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* Form */
+  .login-card {
+    height: 720px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 16px 0 0 16px;
+    position: relative;
+    z-index: 5;
+    padding: 32px;
+  }
+
+  /* Art Work */
+  .artwork-wrapper {
+    position: relative;
+  }
+
+  .artwork-box {
+    display: block;
+    height: 720px;
+    border-radius: 0 24px 24px 0;
+    box-shadow: inset 0 0 0 12px #EBECF0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .artwork-box-inside {
+    display: block;
+    height: 720px;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 12px #EBECF0;
+  }
+
+  .artwork-decoration {
+    width: 840px;
+    position: absolute;
+    z-index: 1;
+    top: 64px;
+    right: -48%;
+    pointer-events: none;
+  }
+
+  .artwork-foreground {
+    width: 840px;
+    position: absolute;
+    z-index: 3;
+    bottom: -90px;
+    right: -48%;
+    pointer-events: none;
+  }
+
+  .login-header {
+    height: 40px;
+    margin-bottom: 32px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  .auth-input {
+    height: 48px;
+  }
+
+  /* input */
+  .auth-input .form-control {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  /* placeholder */
+  .auth-input .form-control::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .forgot-password-link {
+    font-size: 14px;
+  }
+
+  .mock-text {
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 15px !important;
+  }
+
+  .or-divider span {
+    font-size: 14px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    align-items: center;
+    font-size: 14px;
+
+  }
+
+  .auth-action-btn {
+    height: 48px;
+  }
+
+  .auth-action-btn .action-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-login {
+    height: 56px;
+  }
+
+}
+
+/* ====== LARGE DESKTOP ====== */
+
+@media (min-width: 1200px) {
+
+  /* Form */
+  .login-card {
+    height: 720px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 16px 0 0 16px;
+    position: relative;
+    z-index: 5;
+    padding: 48px;
+  }
+
+  .login-header {
+    height: 40px;
+    margin-bottom: 32px;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  /* Art Work */
+  .artwork-wrapper {
+    position: relative;
+  }
+
+  .artwork-box {
+    display: block;
+    height: 720px;
+    border-radius: 0 24px 24px 0;
+    box-shadow: inset 0 0 0 12px #EBECF0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .artwork-box-inside {
+    display: block;
+    height: 720px;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 12px #EBECF0;
+  }
+
+  .artwork-decoration {
+    width: 980px;
+    position: absolute;
+    z-index: 1;
+    top: -64px;
+    right: -48%;
+    pointer-events: none;
+  }
+
+  .artwork-foreground {
+    width: 980px;
+    position: absolute;
+    z-index: 3;
+    bottom: -90px;
+    right: -48%;
+    pointer-events: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .auth-input {
+    height: 48px;
+  }
+
+  /* input */
+  .auth-input .form-control {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  /* placeholder */
+  .auth-input .form-control::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .forgot-password-link {
+    font-size: 14px;
+  }
+
+  .mock-text {
+    font-size: 14px;
+  }
+
+  .btn-login {
+    font-size: 15px !important;
+  }
+
+  .or-divider span {
+    font-size: 14px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    align-items: center;
+    font-size: 14px;
+
+  }
+
+  .auth-action-btn {
+    height: 48px;
+  }
+
+  .auth-action-btn .action-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-login {
+    height: 56px;
+  }
+}
+
+/* =====================================
+   BOOTSTRAP 12-COLUMN DEBUG 
+===================================== */
+
+/* .container.debug-cols {
+  position: relative;
+}
+
+.container.debug-cols::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  
+  background-image: repeating-linear-gradient(to left,
+      rgba(255, 0, 0, 0.18) 0,
+      rgba(255, 0, 0, 0.18) calc(100% / 12),
+      transparent calc(100% / 12),
+      transparent calc(100% / 6));
+
+  pointer-events: none;
+  z-index: 999;
+} */
