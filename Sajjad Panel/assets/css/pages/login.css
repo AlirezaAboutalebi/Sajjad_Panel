@@ -1,69 +1,80 @@
-/* ====== MOBILE ====== */
+/* =========================================================
+   Login Page – Mobile Layout
+   ========================================================= */
+
 .login-page {
+  position: relative;
   height: 100%;
   background-color: var(--sj-bg-page);
-  position: relative;
   overflow: hidden;
-
 }
 
 .login-page .row {
   min-height: 100vh;
 }
 
+/* =========================================================
+   Login Card
+   ========================================================= */
+
 .login-card {
   position: relative;
+  z-index: 5;
+  height: calc(100vh - 176px - 48px);
+  margin: 176px 0 48px;
+  padding: 24px;
   background-color: var(--sj-bg-card);
   border-radius: 16px;
-  margin-top: 176px;
-  margin-bottom: 48px;
-  height: calc(100vh - 176px - 48px);
-  z-index: 5;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 24px;
 }
 
-/* Art Work */
+/* =========================================================
+   Artwork & Decorative Elements
+   ========================================================= */
+
 .artwork-wrapper {
   position: relative;
 }
 
-
-.artwork-box {
-  display: none;
-
-}
-
+.artwork-box,
 .artwork-box-inside {
   display: none;
 }
 
 .artwork-decoration {
-  width: 486px;
   position: absolute;
-  z-index: 1;
   top: -96px;
   right: -4%;
+  z-index: 1;
+  width: 486px;
   pointer-events: none;
 }
 
 .artwork-foreground {
-  width: 486px;
   position: absolute;
-  z-index: 3;
   bottom: -332px;
   right: -4%;
+  z-index: 3;
+  width: 486px;
   pointer-events: none;
 }
 
+/* =========================================================
+   Logo
+   ========================================================= */
+
 .logo {
-  width: 100px;
   position: absolute;
-  z-index: 3;
-  left: 8%;
   top: 40px;
+  left: 8%;
+  z-index: 3;
+  width: 100px;
 }
+
+/* =========================================================
+   Header
+   ========================================================= */
 
 .login-header {
   height: 32px;
@@ -76,45 +87,49 @@
   color: var(--sj-color-neutral-900);
 }
 
-/* wrapper فاصله بین input ها */
+/* =========================================================
+   Form Layout
+   ========================================================= */
+
 .auth-input-group {
   margin-bottom: 12px;
 }
 
-/* کل باکس input */
+/* =========================================================
+   Input Container
+   ========================================================= */
+
 .auth-input {
   height: 40px;
   background-color: #EBECF0;
   border: 1px solid #AE93BD;
   border-radius: 8px;
   overflow: hidden;
-  /* خیلی مهم */
 }
 
-/* حذف border داخلی bootstrap */
+/* Remove default Bootstrap borders */
 .auth-input .form-control,
 .auth-input .input-group-text {
   border: none;
   background-color: transparent;
 }
 
-/* input */
+/* Input Field */
 .auth-input .form-control {
   height: 40px;
+  padding: 0;
   font-size: 12px;
   font-weight: 400;
   color: #000;
-  padding: 0;
 }
 
-/* placeholder */
 .auth-input .form-control::placeholder {
   font-size: 12px;
   font-weight: 400;
   color: #685870;
 }
 
-/* آیکون‌ها */
+/* Input Icons */
 .auth-input .input-group-text {
   padding: 0 8px;
   display: flex;
@@ -122,15 +137,19 @@
   justify-content: center;
 }
 
-/* button eye */
+/* Password Toggle Button */
 .auth-input button.input-group-text {
   cursor: pointer;
 }
 
-/* فوکوس */
+/* Focus State */
 .auth-input .form-control:focus {
   box-shadow: none;
 }
+
+/* =========================================================
+   Links
+   ========================================================= */
 
 .forgot-password-link {
   display: inline-block;
@@ -140,55 +159,51 @@
   text-decoration: underline !important;
 }
 
+/* =========================================================
+   Primary Login Button
+   ========================================================= */
+
 .btn-login {
   height: 48px;
-  border-radius: 8px !important;
-  background-color: #2560A6;
-  border: 1px solid #85A1EE;
-  color: #EBECF0;
+  padding: 0;
   font-size: 13px !important;
   font-weight: 600;
   line-height: 1;
-  padding: 0;
+  color: #EBECF0;
+  background-color: #2560A6;
+  border: 1px solid #85A1EE;
+  border-radius: 8px !important;
 }
 
 .btn-login:hover {
   color: #EBECF0;
 }
 
-.forgot-password-link {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  color: #8E7999 !important;
-  text-decoration: underline !important;
-}
-
-/* ===== Mock Captcha ===== */
+/* =========================================================
+   Mock CAPTCHA
+   ========================================================= */
 
 .mock-captcha {
-  width: 100%;
-  height: 72px;
-  margin-bottom: 24px;
-  background-color: #EBECF0;
-  border: 1px solid #AE93BD;
-  border-radius: 8px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  width: 100%;
+  height: 72px;
+  margin-bottom: 24px;
   padding: 0 12px 0 16px;
+  background-color: #EBECF0;
+  border: 1px solid #AE93BD;
+  border-radius: 8px;
 }
 
-/* سمت متن و چک‌باکس */
+/* CAPTCHA Left Section */
 .mock-captcha-left {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* چک‌باکس */
+/* Checkbox Placeholder */
 .mock-checkbox {
   width: 24px;
   height: 24px;
@@ -197,28 +212,30 @@
   border-radius: 4px;
 }
 
-/* متن */
+/* CAPTCHA Text */
 .mock-text {
   font-size: 12px;
   font-weight: 500;
-  color: #0F111A;
   line-height: 1;
+  color: #0F111A;
 }
 
-/* تصویر reCAPTCHA */
+/* CAPTCHA Image */
 .mock-captcha-right img {
   width: 60px;
   height: 60px;
   object-fit: contain;
 }
 
+/* =========================================================
+   Divider
+   ========================================================= */
 
 .or-divider {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 24px 0 16px 0
-    /* فاصله بالا و پایین */
+  margin: 24px 0 16px;
 }
 
 .or-divider::before,
@@ -233,41 +250,39 @@
   padding: 0 12px;
   font-size: 12px;
   font-weight: 500;
-  color: #8E7999;
   line-height: 1;
+  color: #8E7999;
 }
 
-/* ====== Action Buttons (مثل input ولی button) ====== */
+/* =========================================================
+   Secondary Action Buttons (SSO)
+   ========================================================= */
 
 .auth-action-btn {
-  width: 100%;
-  height: 40px;
-  color: #685870;
-  background-color: #EBECF0;
-  border: 1px solid #AE93BD;
-  border-radius: 8px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 40px;
   padding: 0 8px;
+  background-color: #EBECF0;
+  border: 1px solid #AE93BD;
+  border-radius: 8px !important;
+  color: #685870;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-/* متن دکمه */
 .auth-action-btn .action-text {
   width: 100%;
-  align-items: center;
   font-size: 11.5px;
   font-weight: 400;
-
   line-height: 1;
   word-spacing: -1.5px;
 }
 
-/* آیکن */
 .auth-action-btn .action-icon {
-  display: relative;
+  position: relative;
   right: 8px;
 }
 
@@ -276,38 +291,62 @@
   height: 26px;
 }
 
-/* hover */
+/* Hover State */
 .auth-action-btn:hover {
   background-color: #E4E6EC;
   border-color: #9B7FB8;
 }
 
-/* focus (دسترسی‌پذیری) */
+/* Focus State (Accessibility) */
 .auth-action-btn:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px rgba(174, 147, 189, 0.3);
 }
 
-/* active */
+/* Active State */
 .auth-action-btn:active {
   transform: translateY(1px);
 }
 
-/* ====== TABLET ====== */
+/* =========================================================
+   Tablet Layout (577px – 991px)
+   ========================================================= */
+
 @media (min-width: 577px) and (max-width: 991px) {
 
-  /* Form */
+  /* ---------------------------------------------------------
+     Login Card
+     --------------------------------------------------------- */
+
   .login-card {
-    height: calc(100vh - 240px - 48px);
-    border-radius: 16px;
     position: relative;
     z-index: 5;
+    height: calc(100vh - 240px - 48px);
     padding: 32px;
+    border-radius: 16px;
   }
+
+  /* ---------------------------------------------------------
+     Inputs
+     --------------------------------------------------------- */
 
   .auth-input {
     height: 48px;
   }
+
+  .auth-input .form-control {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .auth-input .form-control::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* ---------------------------------------------------------
+     Artwork
+     --------------------------------------------------------- */
 
   .artwork-decoration {
     width: 620px;
@@ -317,32 +356,28 @@
 
   .artwork-foreground {
     width: 620px;
-    z-index: 3;
     bottom: -408px;
     right: 0%;
+    z-index: 3;
   }
+
+  /* ---------------------------------------------------------
+     Logo & Header
+     --------------------------------------------------------- */
 
   .logo {
     width: 140px;
-    left: 8%;
     top: 40px;
+    left: 8%;
   }
 
   .login-title {
     font-size: 18px;
   }
 
-  /* input */
-  .auth-input .form-control {
-    height: 48px;
-    font-size: 14px;
-  }
-
-  /* placeholder */
-  .auth-input .form-control::placeholder {
-    font-size: 14px;
-    font-weight: 400;
-  }
+  /* ---------------------------------------------------------
+     Text & Links
+     --------------------------------------------------------- */
 
   .forgot-password-link {
     font-size: 14px;
@@ -352,23 +387,26 @@
     font-size: 14px;
   }
 
-  .btn-login {
-    font-size: 15px !important;
-  }
-
   .or-divider span {
     font-size: 14px;
   }
 
-  .auth-action-btn .action-text {
-    width: 100%;
-    align-items: center;
-    font-size: 14px;
+  /* ---------------------------------------------------------
+     Buttons
+     --------------------------------------------------------- */
 
+  .btn-login {
+    height: 56px;
+    font-size: 15px !important;
   }
 
   .auth-action-btn {
     height: 48px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    font-size: 14px;
   }
 
   .auth-action-btn .action-icon img {
@@ -376,38 +414,42 @@
     height: 32px;
   }
 
-  .btn-login {
-    height: 56px;
-  }
-
 }
 
-/* ====== DESKTOP ====== */
+/* =========================================================
+   Desktop Layout (992px – 1199px)
+   ========================================================= */
+
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  /* Form */
+  /* ---------------------------------------------------------
+     Login Card
+     --------------------------------------------------------- */
+
   .login-card {
-    height: 720px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 16px 0 0 16px;
     position: relative;
     z-index: 5;
+    height: 720px;
+    margin: 0;
     padding: 32px;
+    border-radius: 16px 0 0 16px;
   }
 
-  /* Art Work */
+  /* ---------------------------------------------------------
+     Artwork Containers
+     --------------------------------------------------------- */
+
   .artwork-wrapper {
     position: relative;
   }
 
   .artwork-box {
     display: block;
+    position: relative;
+    z-index: 2;
     height: 720px;
     border-radius: 0 24px 24px 0;
     box-shadow: inset 0 0 0 12px #EBECF0;
-    position: relative;
-    z-index: 2;
   }
 
   .artwork-box-inside {
@@ -418,22 +460,26 @@
   }
 
   .artwork-decoration {
-    width: 840px;
     position: absolute;
-    z-index: 1;
     top: 64px;
     right: -48%;
+    z-index: 1;
+    width: 840px;
     pointer-events: none;
   }
 
   .artwork-foreground {
-    width: 840px;
     position: absolute;
-    z-index: 3;
     bottom: -90px;
     right: -48%;
+    z-index: 3;
+    width: 840px;
     pointer-events: none;
   }
+
+  /* ---------------------------------------------------------
+     Header & Logo
+     --------------------------------------------------------- */
 
   .login-header {
     height: 40px;
@@ -444,26 +490,31 @@
     display: none;
   }
 
-
   .login-title {
     font-size: 18px;
   }
+
+  /* ---------------------------------------------------------
+     Inputs
+     --------------------------------------------------------- */
 
   .auth-input {
     height: 48px;
   }
 
-  /* input */
   .auth-input .form-control {
     height: 48px;
     font-size: 14px;
   }
 
-  /* placeholder */
   .auth-input .form-control::placeholder {
     font-size: 14px;
     font-weight: 400;
   }
+
+  /* ---------------------------------------------------------
+     Text & Links
+     --------------------------------------------------------- */
 
   .forgot-password-link {
     font-size: 14px;
@@ -473,23 +524,26 @@
     font-size: 14px;
   }
 
-  .btn-login {
-    font-size: 15px !important;
-  }
-
   .or-divider span {
     font-size: 14px;
   }
 
-  .auth-action-btn .action-text {
-    width: 100%;
-    align-items: center;
-    font-size: 14px;
+  /* ---------------------------------------------------------
+     Buttons
+     --------------------------------------------------------- */
 
+  .btn-login {
+    height: 56px;
+    font-size: 15px !important;
   }
 
   .auth-action-btn {
     height: 48px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    font-size: 14px;
   }
 
   .auth-action-btn .action-icon img {
@@ -497,26 +551,30 @@
     height: 32px;
   }
 
-  .btn-login {
-    height: 56px;
-  }
-
 }
 
-/* ====== LARGE DESKTOP ====== */
+/* =========================================================
+   Large Desktop Layout (≥ 1200px)
+   ========================================================= */
 
 @media (min-width: 1200px) {
 
-  /* Form */
+  /* ---------------------------------------------------------
+     Login Card
+     --------------------------------------------------------- */
+
   .login-card {
-    height: 720px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 16px 0 0 16px;
     position: relative;
     z-index: 5;
+    height: 720px;
+    margin: 0;
     padding: 48px;
+    border-radius: 16px 0 0 16px;
   }
+
+  /* ---------------------------------------------------------
+     Header
+     --------------------------------------------------------- */
 
   .login-header {
     height: 40px;
@@ -527,18 +585,21 @@
     font-size: 18px;
   }
 
-  /* Art Work */
+  /* ---------------------------------------------------------
+     Artwork Containers
+     --------------------------------------------------------- */
+
   .artwork-wrapper {
     position: relative;
   }
 
   .artwork-box {
     display: block;
+    position: relative;
+    z-index: 2;
     height: 720px;
     border-radius: 0 24px 24px 0;
     box-shadow: inset 0 0 0 12px #EBECF0;
-    position: relative;
-    z-index: 2;
   }
 
   .artwork-box-inside {
@@ -549,42 +610,52 @@
   }
 
   .artwork-decoration {
-    width: 980px;
     position: absolute;
-    z-index: 1;
     top: -64px;
     right: -48%;
+    z-index: 1;
+    width: 980px;
     pointer-events: none;
   }
 
   .artwork-foreground {
-    width: 980px;
     position: absolute;
-    z-index: 3;
     bottom: -90px;
     right: -48%;
+    z-index: 3;
+    width: 980px;
     pointer-events: none;
   }
+
+  /* ---------------------------------------------------------
+     Logo
+     --------------------------------------------------------- */
 
   .logo {
     display: none;
   }
 
+  /* ---------------------------------------------------------
+     Inputs
+     --------------------------------------------------------- */
+
   .auth-input {
     height: 48px;
   }
 
-  /* input */
   .auth-input .form-control {
     height: 48px;
     font-size: 14px;
   }
 
-  /* placeholder */
   .auth-input .form-control::placeholder {
     font-size: 14px;
     font-weight: 400;
   }
+
+  /* ---------------------------------------------------------
+     Text & Links
+     --------------------------------------------------------- */
 
   .forgot-password-link {
     font-size: 14px;
@@ -594,23 +665,26 @@
     font-size: 14px;
   }
 
-  .btn-login {
-    font-size: 15px !important;
-  }
-
   .or-divider span {
     font-size: 14px;
   }
 
-  .auth-action-btn .action-text {
-    width: 100%;
-    align-items: center;
-    font-size: 14px;
+  /* ---------------------------------------------------------
+     Buttons
+     --------------------------------------------------------- */
 
+  .btn-login {
+    height: 56px;
+    font-size: 15px !important;
   }
 
   .auth-action-btn {
     height: 48px;
+  }
+
+  .auth-action-btn .action-text {
+    width: 100%;
+    font-size: 14px;
   }
 
   .auth-action-btn .action-icon img {
@@ -618,16 +692,17 @@
     height: 32px;
   }
 
-  .btn-login {
-    height: 56px;
-  }
 }
 
-/* =====================================
-   BOOTSTRAP 12-COLUMN DEBUG 
-===================================== */
+/* =========================================================
+   Utilities – Development Only
+   ========================================================= */
 
-/* .container.debug-cols {
+/*
+  Bootstrap 12-Column Grid Debug Overlay
+  ----------------------------------------------------------
+/*
+.container.debug-cols {
   position: relative;
 }
 
@@ -635,14 +710,15 @@
   content: "";
   position: absolute;
   inset: 0;
-
-  
-  background-image: repeating-linear-gradient(to left,
-      rgba(255, 0, 0, 0.18) 0,
-      rgba(255, 0, 0, 0.18) calc(100% / 12),
-      transparent calc(100% / 12),
-      transparent calc(100% / 6));
-
-  pointer-events: none;
   z-index: 999;
-} */
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0.18) 0,
+    rgba(255, 0, 0, 0.18) calc(100% / 12),
+    transparent calc(100% / 12),
+    transparent calc(100% / 6)
+  );
+}
+*/
