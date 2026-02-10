@@ -5,7 +5,7 @@
 .login-page {
   position: relative;
   height: 100%;
-  background-color: var(--sj-bg-page);
+  background-color: #2560A6;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
   height: calc(100vh - 176px - 48px);
   margin: 176px 0 48px;
   padding: 24px;
-  background-color: var(--sj-bg-card);
+  background-color: #EBECF0;
   border-radius: 16px;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -84,7 +84,7 @@
 .login-title {
   font-size: 14px;
   font-weight: 500;
-  color: var(--sj-color-neutral-900);
+  color: #0F111A;
 }
 
 /* =========================================================
