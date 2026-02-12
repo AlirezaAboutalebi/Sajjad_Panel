@@ -1,0 +1,375 @@
+/* =========================================================
+   Cartable – Mobile Layout
+   ========================================================= */
+
+.cartable-page {
+    background-color: #E8E9ED;
+    padding: 24px 0;
+    height: 100vh;
+}
+
+/* ===============================
+   Cartable Header
+================================ */
+
+.cartable-header {
+    padding: 0 0 12px;
+}
+
+/* Wrapper for right aligned items */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* ================= Sajjad Logo ================= */
+
+.sajjad-icon img {
+    height: 48px;
+    object-fit: contain;
+}
+
+/* ================= User Box ================= */
+
+.userbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 180px;
+    height: 48px;
+    padding: 0 4px;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 8px;
+}
+
+/* Avatar */
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* Texts */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.welcome-text {
+    font-size: 11px;
+    line-height: 1;
+    color: #685870;
+    margin: 0 0 2px;
+}
+
+.user-name {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #0F111A;
+    margin: 0;
+}
+
+
+/* ================= Divider ================= */
+
+
+.cartable-divider {
+    height: 1px;
+    background-color: #AE93BD;
+    opacity: 0.3;
+    margin: 0 16px;
+}
+
+/* =========================================================
+   Cartable Search
+   ========================================================= */
+.cartable-search {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* ---------------- Title ---------------- */
+
+.cartable-search-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0F111A;
+    margin-bottom: 12px !important;
+}
+
+/* ---------------- Field Group ---------------- */
+
+.cartable-field-group {
+    margin-bottom: 8px;
+}
+
+/* ---------------- Input Container ---------------- */
+
+.cartable-input {
+    height: 36px;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Remove default Bootstrap borders */
+.cartable-input .form-control,
+.cartable-input .input-group-text {
+    border: none;
+    background-color: transparent;
+}
+
+/* Input / Select */
+.cartable-input .form-control {
+    height: 36px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0F111A;
+}
+
+.cartable-input .form-control::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    color: #685870;
+}
+
+.org-form {
+    color: #685870 !important;
+}
+
+/* Icons */
+.cartable-input .input-group-text {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #685870;
+}
+
+/* Trailing icon button (select) */
+.cartable-select-toggle {
+    cursor: pointer;
+}
+
+/* Focus State */
+.cartable-input .form-control:focus {
+    box-shadow: none;
+}
+
+/* ---------------- Search Button ---------------- */
+
+.cartable-search-btn {
+    height: 40px;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    color: #EBECF0 !important;
+    background-color: #2560A6;
+    border: 1px solid #85A1EE;
+    border-radius: 8px !important;
+}
+
+
+
+/* =========================================================
+   Cartable Filters
+   ========================================================= */
+
+.cartable-filter-list {
+    display: flex;
+    gap: 8px;
+    padding: 0 12px !important;
+    margin: 0 -12px !important;
+    list-style: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    /* IE & Edge Legacy */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.cartable-filter-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+/* ---------------- Filter Chip ---------------- */
+
+.cartable-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 12px;
+    gap: 4px;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1;
+    color: #685870;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ---------------- Icon ---------------- */
+
+.cartable-filter-chip .chip-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cartable-filter-chip .chip-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---------------- Text ---------------- */
+
+.cartable-filter-chip .chip-text {
+    white-space: nowrap;
+}
+
+/* ---------------- Hover ---------------- */
+
+.cartable-filter-chip:hover {
+    background-color: #E4E6EC;
+    border-color: #9B7FB8;
+}
+
+/* ---------------- Active State ---------------- */
+
+.cartable-filter-chip.active {
+    background-color: #2560A6;
+    border-color: #685870;
+    color: #E4E6EC;
+}
+
+.cartable-filter-chip.active svg {
+    color: #E4E6EC;
+}
+
+/* ---------------- Focus (Accessibility) ---------------- */
+
+.cartable-filter-chip:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 96, 166, 0.25);
+}
+
+
+/* ================= Cards ================= */
+
+.service-card {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.service-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service-meta {
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 12px;
+}
+
+.service-meta li {
+    margin-bottom: 4px;
+}
+
+.service-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-primary {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #2560A6;
+    color: #fff;
+    border: none;
+    font-size: 13px;
+}
+
+.btn-secondary {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #EEF2FF;
+    color: #2560A6;
+    border: none;
+    font-size: 13px;
+}
+
+/* ================= Bottom Nav ================= */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: #fff;
+    border-top: 1px solid #E5E7EB;
+}
+
+.bottom-nav ul {
+    display: flex;
+    height: 100%;
+}
+
+.bottom-nav li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #6B7280;
+}
+
+.bottom-nav li.active {
+    color: #2560A6;
+    font-weight: 600;
+}
+
+/* ================= Debug – 12 Columns ================= */
+
+.container.debug-cols {
+    position: relative;
+}
+
+.container.debug-cols::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    background-image: repeating-linear-gradient(to left,
+            rgba(37, 96, 166, 0.15) 0,
+            rgba(37, 96, 166, 0.15) calc(100% / 12),
+            transparent calc(100% / 12),
+            transparent calc(100% / 6));
+}
