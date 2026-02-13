@@ -5,7 +5,8 @@
 .cartable-page {
     background-color: #E8E9ED;
     padding: 24px 0;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 80px;
 }
 
 /* ===============================
@@ -13,7 +14,13 @@
 ================================ */
 
 .cartable-header {
-    padding: 0 0 12px;
+    position: fixed;
+    padding-top: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #E8E9ED;
 }
 
 /* Wrapper for right aligned items */
@@ -83,14 +90,15 @@
     height: 1px;
     background-color: #AE93BD;
     opacity: 0.3;
-    margin: 0 16px;
+    margin: 8px 16px 0 16px;
+
 }
 
 /* =========================================================
    Cartable Search
    ========================================================= */
 .cartable-search {
-    margin-top: 16px;
+    margin-top: 80px;
     margin-bottom: 16px;
 }
 
@@ -107,9 +115,14 @@
 
 .cartable-field-group {
     margin-bottom: 8px;
+
 }
 
 /* ---------------- Input Container ---------------- */
+
+.form-control:focus {
+    box-shadow: none;
+}
 
 .cartable-input {
     height: 36px;
@@ -133,6 +146,8 @@
     font-size: 12px;
     font-weight: 400;
     color: #0F111A;
+
+
 }
 
 .cartable-input .form-control::placeholder {
@@ -141,9 +156,8 @@
     color: #685870;
 }
 
-.org-form {
-    color: #685870 !important;
-}
+
+
 
 /* Icons */
 .cartable-input .input-group-text {
@@ -154,14 +168,71 @@
     color: #685870;
 }
 
-/* Trailing icon button (select) */
-.cartable-select-toggle {
+
+.cartable-dropdown {
+    width: 100%;
+
+}
+
+.cartable-dropdown-trigger {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    font-weight: 400;
+    color: #685870;
     cursor: pointer;
 }
 
-/* Focus State */
-.cartable-input .form-control:focus {
-    box-shadow: none;
+.cartable-dropdown-trigger::after {
+    display: none;
+}
+
+/* Icons */
+.cartable-icon,
+.cartable-arrow {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.dropdown-text {
+    flex: 1;
+    text-align: right;
+
+}
+
+/* Menu */
+.cartable-dropdown-menu {
+    width: 100%;
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1px solid #AE93BD;
+    box-shadow: 0 8px 24px rgba(15, 17, 26, 0.08);
+    overflow: hidden;
+}
+
+.dropdown-item {
+    height: 28px;
+    font-size: 11px !important;
+    font-weight: 400;
+    color: #685870;
+    background-color: #EBECF0;
+
+}
+
+.dropdown-item:hover {
+    background-color: #E3E4E8;
+}
+
+.dropdown-item:active {
+    background-color: #2560A6;
 }
 
 /* ---------------- Search Button ---------------- */
@@ -169,8 +240,8 @@
 .cartable-search-btn {
     height: 40px;
     padding: 0;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 14px !important;
+    font-weight: 500;
     line-height: 1;
     color: #EBECF0 !important;
     background-color: #2560A6;
@@ -195,15 +266,17 @@
     overflow-y: hidden;
     white-space: nowrap;
     -ms-overflow-style: none;
-    /* IE & Edge Legacy */
     scrollbar-width: none;
-    /* Firefox */
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .cartable-filter-list::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari */
 }
+
+
 
 /* ---------------- Filter Chip ---------------- */
 
@@ -274,90 +347,435 @@
 }
 
 
-/* ================= Cards ================= */
-
-.service-card {
-    background-color: #fff;
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 16px;
+.search-result-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #685870;
 }
 
+/* Right & Left items */
+.result-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* Icons */
+.result-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #685870;
+}
+
+.result-item svg {
+    width: 18px;
+}
+
+/* Middle divider */
+.result-divider {
+    flex: 1;
+    height: 1px;
+    background-color: #AE93BD;
+    margin: 0 12px;
+}
+
+/* =========================================================
+   Service Card
+   ========================================================= */
+
+.service-card {
+    position: relative;
+    display: block;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    height: 180px;
+}
+
+/* =========================================================
+   Right Column – Category (Fixed Width)
+   ========================================================= */
+
+.service-card-category {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #E3E4E8;
+    display: grid;
+    grid-template-rows: auto 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 12px;
+    gap: 6px;
+}
+
+/* Divider between right & left */
+.service-card-category::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #AE93BD;
+
+}
+
+/* =========================================================
+   Category Icon
+   ========================================================= */
+
+.category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* =========================================================
+   Auto-grow Lines
+   ========================================================= */
+
+.category-line {
+    width: 1px;
+    height: 100%;
+    background-color: #AE93BD;
+}
+
+/* =========================================================
+   Vertical Category Title
+   ========================================================= */
+
+.category-title {
+    writing-mode: vertical-rl;
+    font-size: 11px;
+    font-weight: 500;
+    color: #685870;
+}
+
+/* =========================================================
+   Left Column – Content
+   ========================================================= */
+
+.service-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 12px;
+    padding-right: 56px;
+
+}
+
+/* =========================================================
+   Title
+   ========================================================= */
+
 .service-title {
+    flex-shrink: 0;
     font-size: 14px;
     font-weight: 600;
+    color: #0F111A;
+    line-height: 1.6;
     margin-bottom: 8px;
 }
 
+.service-card-footer {
+    margin-top: auto;
+}
+
+/* =========================================================
+   Meta Information
+   ========================================================= */
+
 .service-meta {
+    margin: 12px 0 !important;
     font-size: 12px;
-    color: #6B7280;
-    margin-bottom: 12px;
+    color: #685870;
+
 }
 
 .service-meta li {
-    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 20px;
+    margin: 4px 0;
 }
+
+.meta-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.meta-label {
+    color: #685870;
+    font-weight: 500;
+}
+
+.meta-value {
+    color: #0F111A;
+    font-weight: 400;
+}
+
+/* =========================================================
+   Actions
+   ========================================================= */
 
 .service-actions {
     display: flex;
     gap: 8px;
 }
 
-.btn-primary {
+/* Primary Button */
+.service-actions .btn-primary {
     flex: 1;
-    height: 40px;
-    border-radius: 10px;
+    height: 36px;
     background-color: #2560A6;
-    color: #fff;
-    border: none;
-    font-size: 13px;
+    color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
-.btn-secondary {
+/* Secondary Button */
+.service-actions .btn-secondary {
     flex: 1;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #EEF2FF;
-    color: #2560A6;
-    border: none;
-    font-size: 13px;
+    height: 36px;
+    background-color: #EBECF0;
+    color: #0F111A;
+    border: 1px solid #AE93BD;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
-/* ================= Bottom Nav ================= */
+/* =========================================================
+   Interaction States
+   ========================================================= */
+
+.service-actions .btn-primary:hover {
+    background-color: #235897;
+    border-color: #9B7FB8;
+}
+
+.service-actions .btn-secondary:hover {
+    background-color: #E4E6EC;
+    border-color: #9B7FB8;
+}
+
+
+/* ===============================
+   Pagination
+================================ */
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 8px; 
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* page item */
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dots */
+.page-item.dots {
+  font-size: 12px;
+  color: #8E7999;
+  pointer-events: none;
+}
+
+/* buttons */
+.page-btn {
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  font-weight: 500;
+  color: #685870;
+  cursor: pointer;
+}
+
+/* active */
+.page-item.active .page-btn {
+  background-color: #2560A6;
+  border-color: #2560A6;
+  color: #EBECF0;
+}
+
+/* hover */
+.page-btn:hover {
+  background-color: #E3E4E8;
+}
+
+
+/* ===============================
+   Bottom Navigation
+================================ */
 
 .bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 64px;
-    background-color: #fff;
-    border-top: 1px solid #E5E7EB;
+    height: 72px;
+    border-radius: 8px 8px 0 0;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    z-index: 30;
 }
 
-.bottom-nav ul {
-    display: flex;
-    height: 100%;
-}
-
-.bottom-nav li {
-    flex: 1;
+/* list */
+.bottom-nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    color: #6B7280;
+    height: 100%;
+    padding: 0 8px;
+    gap: 24px;
 }
 
-.bottom-nav li.active {
-    color: #2560A6;
-    font-weight: 600;
+/* item */
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #685870;
+    cursor: pointer;
+}
+
+.bottom-nav-item svg {
+    width: 22px;
+    height: 22px;
+    color: #685870;
+}
+
+.bottom-nav-item.active svg {
+    color: #EBECF0;
+}
+
+/* icon container */
+.icon-box {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #685870;
+}
+
+/* label */
+.nav-label {
+    line-height: 1;
+}
+
+/* ===============================
+   Active State
+================================ */
+
+.bottom-nav-item.active .icon-box {
+    background-color: #2560A6;
+    color: #EBECF0;
+}
+
+/* ===============================
+   Floating Support Button
+================================ */
+
+.support-fab {
+    position: fixed;
+    left: -112px;
+    bottom: 80px;
+    z-index: 40;
+
+}
+
+.support-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 48px;
+    padding: 0 12px;
+    background-color: #EBECF0;
+    border: 1px solid #AE93BD;
+    border-radius: 0 360px 360px 0 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #685870;
+    cursor: pointer;
+}
+
+/* icon */
+.support-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #685870;
+}
+
+.support-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #685870;
+}
+
+/* hover */
+.support-btn:hover {
+    background-color: #E3E4E8;
+}
+
+.support-fab:hover {
+    left: 0px;
+    transition: 0.5s;
+}
+
+/* active (touch feedback) */
+.support-btn:active {
+    transform: translateY(1px);
 }
 
 /* ================= Debug – 12 Columns ================= */
 
-.container.debug-cols {
+/* .container.debug-cols {
     position: relative;
 }
 
@@ -372,4 +790,4 @@
             rgba(37, 96, 166, 0.15) calc(100% / 12),
             transparent calc(100% / 12),
             transparent calc(100% / 6));
-}
+} */
