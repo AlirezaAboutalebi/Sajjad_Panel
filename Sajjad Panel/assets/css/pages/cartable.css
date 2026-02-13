@@ -1,12 +1,23 @@
 /* =========================================================
    Cartable – Mobile Layout
    ========================================================= */
+.bg-color {
+    background-color: #E8E9ED;
+}
 
 .cartable-page {
-    background-color: #E8E9ED;
+
     padding: 24px 0;
     height: 100%;
     padding-bottom: 80px;
+}
+
+.cartable-desktop-layout {
+    display: block;
+}
+
+.main-content {
+    width: 100%;
 }
 
 /* ===============================
@@ -29,6 +40,10 @@
     align-items: center;
     justify-content: space-between;
 
+}
+
+.logo-type {
+    display: none;
 }
 
 /* ================= Sajjad Logo ================= */
@@ -92,6 +107,10 @@
     opacity: 0.3;
     margin: 8px 16px 0 16px;
 
+}
+
+.take-grid {
+    display: grid;
 }
 
 /* =========================================================
@@ -397,8 +416,8 @@
     border: 1px solid #AE93BD;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 16px;
     height: 180px;
+    margin-bottom: 16px;
 }
 
 /* =========================================================
@@ -586,61 +605,61 @@
 ================================ */
 
 .pagination-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 8px; 
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 8px;
+    overflow: hidden;
 }
 
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* page item */
 .page-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* dots */
 .page-item.dots {
-  font-size: 12px;
-  color: #8E7999;
-  pointer-events: none;
+    font-size: 12px;
+    color: #8E7999;
+    pointer-events: none;
 }
 
 /* buttons */
 .page-btn {
-  min-width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  border-radius: 8px !important;
-  font-size: 12px !important;
-  font-weight: 500;
-  color: #685870;
-  cursor: pointer;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #685870;
+    cursor: pointer;
 }
 
 /* active */
 .page-item.active .page-btn {
-  background-color: #2560A6;
-  border-color: #2560A6;
-  color: #EBECF0;
+    background-color: #2560A6;
+    border-color: #2560A6;
+    color: #EBECF0;
 }
 
 /* hover */
 .page-btn:hover {
-  background-color: #E3E4E8;
+    background-color: #E3E4E8;
 }
 
 
@@ -773,9 +792,195 @@
     transform: translateY(1px);
 }
 
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+
+    .md-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .service-card {
+        margin-bottom: 0;
+    }
+
+    .cards {
+        margin-bottom: 16px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .search-inputs {
+        display: contents;
+    }
+
+    .lg-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+
+
+    .service-card {
+        margin-bottom: 0;
+    }
+
+    .cards {
+        margin-bottom: 16px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .search-inputs {
+        display: contents;
+    }
+
+    .lg-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+  
+    /* ===============================
+        Cartable Header
+    ================================ */
+
+    .cartable-header {
+        position: fixed;
+        padding-top: 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        background-color: #E8E9ED;
+    }
+
+    /* Wrapper for right aligned items */
+    .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .logo-type {
+        display: contents;
+        font-family: 'iranNastaliq';
+        font-size: 42px;
+        color: #0F111A;
+    }
+
+    /* ================= Sajjad Logo ================= */
+
+    .sajjad-icon img {
+        height: 72px;
+        object-fit: contain;
+    }
+
+    /* ================= User Box ================= */
+
+    .userbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 208px;
+        height: 72px;
+        padding: 0 4px;
+        background-color: #EBECF0;
+        border: 1px solid #AE93BD;
+        border-radius: 8px;
+
+    }
+
+    /* Avatar */
+    .user-avatar img {
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+    }
+
+    /* Texts */
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .welcome-text {
+        font-size: 11px;
+        line-height: 1;
+        color: #685870;
+        margin: 0 0 2px;
+    }
+
+    .user-name {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F111A;
+        margin: 0;
+    }
+
+
+    /* ================= Divider ================= */
+
+    .cartable-divider {
+        display: none;
+    }
+
+      .cartable-page {
+        background-color: #E8E9ED;
+        padding: 0;
+        max-height: 100vh;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+    .main-content{
+        border: 1px solid red;
+
+    }
+    .cartable-desktop-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 2555px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .bottom-nav {
+        position: relative;
+        top: 0px;
+        width: 80px;
+        height: calc(100vh - 160px);
+        border-radius: 16px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-nav-list {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .main-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+}
+
 /* ================= Debug – 12 Columns ================= */
 
-/* .container.debug-cols {
+.container.debug-cols {
     position: relative;
 }
 
@@ -790,4 +995,4 @@
             rgba(37, 96, 166, 0.15) calc(100% / 12),
             transparent calc(100% / 12),
             transparent calc(100% / 6));
-} */
+}
