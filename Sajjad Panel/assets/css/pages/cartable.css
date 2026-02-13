@@ -113,6 +113,10 @@
     display: grid;
 }
 
+.head-line {
+    display: none;
+}
+
 /* =========================================================
    Cartable Search
    ========================================================= */
@@ -846,14 +850,14 @@
         gap: 8px;
     }
 
-  
+
     /* ===============================
         Cartable Header
     ================================ */
 
     .cartable-header {
         position: fixed;
-        padding-top: 16px;
+        padding-top: 12px;
         top: 0;
         left: 0;
         right: 0;
@@ -866,6 +870,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
 
     }
 
@@ -935,31 +940,33 @@
         display: none;
     }
 
-      .cartable-page {
+
+
+    .cartable-page {
         background-color: #E8E9ED;
         padding: 0;
-        max-height: 100vh;
+        height: 100vh;
         padding-bottom: 0px;
         overflow: hidden;
     }
-    .main-content{
-        border: 1px solid red;
 
-    }
+
     .cartable-desktop-layout {
         display: flex;
-        flex-direction: column;
-        gap: 2555px;
+        flex-direction: row-reverse;
+        gap: 16px;
         align-items: flex-start;
         justify-content: flex-start;
+        height: calc(100vh - 124px);
+        margin-top: 100px;
     }
 
     .bottom-nav {
         position: relative;
         top: 0px;
         width: 80px;
-        height: calc(100vh - 160px);
-        border-radius: 16px;
+        height: 100%;
+        border-radius: 8px;
         flex-shrink: 0;
         display: flex;
         justify-content: center;
@@ -968,19 +975,66 @@
 
     .bottom-nav-list {
         flex-direction: column;
-        gap: 18px;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    .cartable-search {
+        margin-top: 32px;
+        margin-bottom: 16px;
     }
 
     .main-content {
+        border-radius: 8px;
         flex: 1;
         min-width: 0;
+        height: calc(100vh - 124px);
     }
+
+    .pagination-wrapper {
+        display: none;
+    }
+
+    .service-card {
+        margin-bottom: 0;
+    }
+
+    .cards {
+        margin-bottom: 16px;
+    }
+
+    .head-line {
+        display: contents;
+    }
+
+    .head-line-1st {
+        bottom: -1px;
+    }
+
+    .head-line-2nd {
+        position: relative;
+        right: -64px;
+        bottom: -1px;
+    }
+
+
+    .content-box {
+        height: calc(100vh - 172px);
+        background-color: #EBECF0;
+        border: 1px solid #AE93BD;
+        border-radius: 8px 0px 8px 8px;
+        overflow: auto;
+        /* margin-top: -0px; */
+    }
+
+
+
 
 }
 
 /* ================= Debug – 12 Columns ================= */
 
-.container.debug-cols {
+/* .container.debug-cols {
     position: relative;
 }
 
@@ -995,4 +1049,4 @@
             rgba(37, 96, 166, 0.15) calc(100% / 12),
             transparent calc(100% / 12),
             transparent calc(100% / 6));
-}
+} */
