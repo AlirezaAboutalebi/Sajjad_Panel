@@ -1,28 +1,19 @@
-/* =========================================================
-   Cartable – Mobile Layout
-   ========================================================= */
-.bg-color {
+/* Base */
+
+.sj-app {
     background-color: #E8E9ED;
 }
 
-.cartable-page {
 
+/* ===============================
+   Header Section
+================================ */
+
+.cartable-page {
     padding: 24px 0;
     height: 100%;
     padding-bottom: 80px;
 }
-
-.cartable-desktop-layout {
-    display: block;
-}
-
-.main-content {
-    width: 100%;
-}
-
-/* ===============================
-   Cartable Header
-================================ */
 
 .cartable-header {
     position: fixed;
@@ -34,26 +25,11 @@
     background-color: #E8E9ED;
 }
 
-/* Wrapper for right aligned items */
 .header-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-
-.logo-type {
-    display: none;
-}
-
-/* ================= Sajjad Logo ================= */
-
-.sajjad-icon img {
-    height: 48px;
-    object-fit: contain;
-}
-
-/* ================= User Box ================= */
 
 .userbox {
     display: flex;
@@ -67,14 +43,12 @@
     border-radius: 8px;
 }
 
-/* Avatar */
 .user-avatar img {
     width: 40px;
     height: 40px;
     border-radius: 8px;
 }
 
-/* Texts */
 .user-info {
     display: flex;
     flex-direction: column;
@@ -97,9 +71,15 @@
     margin: 0;
 }
 
+.logo-type {
+    display: none;
+}
 
-/* ================= Divider ================= */
 
+.sajjad-icon img {
+    height: 48px;
+    object-fit: contain;
+}
 
 .cartable-divider {
     height: 1px;
@@ -109,23 +89,32 @@
 
 }
 
-.take-grid {
-    display: grid;
+
+/* ===============================
+   Main Content
+================================ */
+
+.cartable-layout {
+    display: block;
+}
+
+.main-content {
+    width: 100%;
 }
 
 .head-line {
     display: none;
 }
 
-/* =========================================================
-   Cartable Search
-   ========================================================= */
+
+/* ===============================
+   Search Area
+================================ */
+
 .cartable-search {
     margin-top: 80px;
     margin-bottom: 16px;
 }
-
-/* ---------------- Title ---------------- */
 
 .cartable-search-title {
     font-size: 16px;
@@ -134,14 +123,14 @@
     margin-bottom: 12px !important;
 }
 
-/* ---------------- Field Group ---------------- */
+.take-grid {
+    display: grid;
+}
 
 .cartable-field-group {
     margin-bottom: 8px;
 
 }
-
-/* ---------------- Input Container ---------------- */
 
 .form-control:focus {
     box-shadow: none;
@@ -155,7 +144,6 @@
     overflow: hidden;
 }
 
-/* Remove default Bootstrap borders */
 .cartable-input .form-control,
 .cartable-input .input-group-text {
     border: none;
@@ -169,8 +157,6 @@
     font-size: 12px;
     font-weight: 400;
     color: #0F111A;
-
-
 }
 
 .cartable-input .form-control::placeholder {
@@ -179,10 +165,6 @@
     color: #685870;
 }
 
-
-
-
-/* Icons */
 .cartable-input .input-group-text {
     padding: 0 8px;
     display: flex;
@@ -190,7 +172,6 @@
     justify-content: center;
     color: #685870;
 }
-
 
 .cartable-dropdown {
     width: 100%;
@@ -217,7 +198,6 @@
     display: none;
 }
 
-/* Icons */
 .cartable-icon,
 .cartable-arrow {
     display: flex;
@@ -231,7 +211,6 @@
 
 }
 
-/* Menu */
 .cartable-dropdown-menu {
     width: 100%;
     margin-top: 4px;
@@ -258,7 +237,8 @@
     background-color: #2560A6;
 }
 
-/* ---------------- Search Button ---------------- */
+
+/* Search Button */
 
 .cartable-search-btn {
     height: 40px;
@@ -273,10 +253,9 @@
 }
 
 
-
-/* =========================================================
-   Cartable Filters
-   ========================================================= */
+/* ===============================
+   Chips Filters
+================================ */
 
 .cartable-filter-list {
     display: flex;
@@ -299,10 +278,6 @@
     display: none;
 }
 
-
-
-/* ---------------- Filter Chip ---------------- */
-
 .cartable-filter-chip {
     display: inline-flex;
     align-items: center;
@@ -321,8 +296,6 @@
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* ---------------- Icon ---------------- */
-
 .cartable-filter-chip .chip-icon {
     width: 16px;
     height: 16px;
@@ -337,20 +310,14 @@
     height: 16px;
 }
 
-/* ---------------- Text ---------------- */
-
 .cartable-filter-chip .chip-text {
     white-space: nowrap;
 }
-
-/* ---------------- Hover ---------------- */
 
 .cartable-filter-chip:hover {
     background-color: #E4E6EC;
     border-color: #9B7FB8;
 }
-
-/* ---------------- Active State ---------------- */
 
 .cartable-filter-chip.active {
     background-color: #2560A6;
@@ -362,13 +329,15 @@
     color: #E4E6EC;
 }
 
-/* ---------------- Focus (Accessibility) ---------------- */
-
 .cartable-filter-chip:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px rgba(37, 96, 166, 0.25);
 }
 
+
+/* ===============================
+   Result Bar
+================================ */
 
 .search-result-bar {
     display: flex;
@@ -381,7 +350,6 @@
     color: #685870;
 }
 
-/* Right & Left items */
 .result-item {
     display: flex;
     align-items: center;
@@ -389,7 +357,6 @@
     white-space: nowrap;
 }
 
-/* Icons */
 .result-icon {
     display: flex;
     align-items: center;
@@ -401,7 +368,6 @@
     width: 18px;
 }
 
-/* Middle divider */
 .result-divider {
     flex: 1;
     height: 1px;
@@ -409,9 +375,11 @@
     margin: 0 12px;
 }
 
-/* =========================================================
-   Service Card
-   ========================================================= */
+
+
+/* ===============================
+   Result Bar
+================================ */
 
 .service-card {
     position: relative;
@@ -424,9 +392,7 @@
     margin-bottom: 16px;
 }
 
-/* =========================================================
-   Right Column – Category (Fixed Width)
-   ========================================================= */
+/* Card Right Side */
 
 .service-card-category {
     position: absolute;
@@ -442,7 +408,6 @@
     gap: 6px;
 }
 
-/* Divider between right & left */
 .service-card-category::after {
     content: "";
     position: absolute;
@@ -453,10 +418,6 @@
     background-color: #AE93BD;
 
 }
-
-/* =========================================================
-   Category Icon
-   ========================================================= */
 
 .category-icon {
     display: flex;
@@ -469,19 +430,11 @@
     height: 20px;
 }
 
-/* =========================================================
-   Auto-grow Lines
-   ========================================================= */
-
 .category-line {
     width: 1px;
     height: 100%;
     background-color: #AE93BD;
 }
-
-/* =========================================================
-   Vertical Category Title
-   ========================================================= */
 
 .category-title {
     writing-mode: vertical-rl;
@@ -490,9 +443,8 @@
     color: #685870;
 }
 
-/* =========================================================
-   Left Column – Content
-   ========================================================= */
+
+/* Card Left Side */
 
 .service-card-content {
     display: flex;
@@ -502,10 +454,6 @@
     padding-right: 56px;
 
 }
-
-/* =========================================================
-   Title
-   ========================================================= */
 
 .service-title {
     flex-shrink: 0;
@@ -519,10 +467,6 @@
 .service-card-footer {
     margin-top: auto;
 }
-
-/* =========================================================
-   Meta Information
-   ========================================================= */
 
 .service-meta {
     margin: 12px 0 !important;
@@ -554,16 +498,12 @@
     font-weight: 400;
 }
 
-/* =========================================================
-   Actions
-   ========================================================= */
 
 .service-actions {
     display: flex;
     gap: 8px;
 }
 
-/* Primary Button */
 .service-actions .btn-primary {
     flex: 1;
     height: 36px;
@@ -576,7 +516,6 @@
     cursor: pointer;
 }
 
-/* Secondary Button */
 .service-actions .btn-secondary {
     flex: 1;
     height: 36px;
@@ -588,10 +527,6 @@
     font-weight: 400;
     cursor: pointer;
 }
-
-/* =========================================================
-   Interaction States
-   ========================================================= */
 
 .service-actions .btn-primary:hover {
     background-color: #235897;
@@ -605,70 +540,7 @@
 
 
 /* ===============================
-   Pagination
-================================ */
-
-.pagination-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 8px;
-    overflow: hidden;
-}
-
-.pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/* page item */
-.page-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* dots */
-.page-item.dots {
-    font-size: 12px;
-    color: #8E7999;
-    pointer-events: none;
-}
-
-/* buttons */
-.page-btn {
-    min-width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    border-radius: 8px !important;
-    font-size: 12px !important;
-    font-weight: 500;
-    color: #685870;
-    cursor: pointer;
-}
-
-/* active */
-.page-item.active .page-btn {
-    background-color: #2560A6;
-    border-color: #2560A6;
-    color: #EBECF0;
-}
-
-/* hover */
-.page-btn:hover {
-    background-color: #E3E4E8;
-}
-
-
-/* ===============================
-   Bottom Navigation
+    Navigation
 ================================ */
 
 .bottom-nav {
@@ -683,7 +555,6 @@
     z-index: 30;
 }
 
-/* list */
 .bottom-nav-list {
     display: flex;
     align-items: center;
@@ -693,7 +564,6 @@
     gap: 24px;
 }
 
-/* item */
 .bottom-nav-item {
     display: flex;
     flex-direction: column;
@@ -715,7 +585,6 @@
     color: #EBECF0;
 }
 
-/* icon container */
 .icon-box {
     width: 36px;
     height: 36px;
@@ -726,23 +595,14 @@
     color: #685870;
 }
 
-/* label */
 .nav-label {
     line-height: 1;
 }
-
-/* ===============================
-   Active State
-================================ */
 
 .bottom-nav-item.active .icon-box {
     background-color: #2560A6;
     color: #EBECF0;
 }
-
-/* ===============================
-   Floating Support Button
-================================ */
 
 .support-fab {
     position: fixed;
@@ -767,7 +627,6 @@
     cursor: pointer;
 }
 
-/* icon */
 .support-icon {
     display: flex;
     align-items: center;
@@ -781,7 +640,6 @@
     color: #685870;
 }
 
-/* hover */
 .support-btn:hover {
     background-color: #E3E4E8;
 }
@@ -791,15 +649,16 @@
     transition: 0.5s;
 }
 
-/* active (touch feedback) */
 .support-btn:active {
     transform: translateY(1px);
 }
 
 
+/* ===============================
+    Responsive
+================================ */
+
 @media (min-width: 768px) and (max-width: 991px) {
-
-
 
     .md-grid-2 {
         grid-template-columns: repeat(2, 1fr);
@@ -827,8 +686,6 @@
         gap: 8px;
     }
 
-
-
     .service-card {
         margin-bottom: 0;
     }
@@ -841,19 +698,16 @@
 
 @media (min-width: 1200px) {
 
-    .search-inputs {
-        display: contents;
-    }
+
 
     .lg-grid-3 {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
 
-
-    /* ===============================
-        Cartable Header
-    ================================ */
+    .search-inputs {
+        display: contents;
+    }
 
     .cartable-header {
         position: fixed;
@@ -951,7 +805,7 @@
     }
 
 
-    .cartable-desktop-layout {
+    .cartable-layout {
         display: flex;
         flex-direction: row-reverse;
         gap: 16px;
@@ -989,10 +843,6 @@
         flex: 1;
         min-width: 0;
         height: calc(100vh - 124px);
-    }
-
-    .pagination-wrapper {
-        display: none;
     }
 
     .service-card {

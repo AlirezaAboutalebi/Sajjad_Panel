@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
-<body class="bg-color">
+<body class="sj-app">
 
-    <div class="sj-app cartable-page">
+    <div class="cartable-page">
 
-        <!-- ===============================
-         Mobile Header
-        ================================ -->
+
+        <!-- Header Section -->
+
         <header class="cartable-header">
             <div class="container debug-cols">
                 <div class="row">
                     <div class="col-12 px-lg-0">
                         <div class="header-right">
-                            <!-- User Box -->
+                            <!-- Userinfo Box -->
                             <div class="userbox">
                                 <div class="user-avatar">
                                     <img src="../assets/img/UserCharacter.png" alt="">
@@ -37,6 +37,7 @@
                                     <p class="user-name">محمدحسین طاهری</p>
                                 </div>
                             </div>
+                            <!-- Sajjad Title -->
                             <h1 class="logo-type">سامانه جامع امور دانشجویان (سجاد)</h1>
                             <!-- Sajjad Logo -->
                             <div class="sajjad-icon">
@@ -48,20 +49,22 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Divider Line -->
             <div class="cartable-divider"></div>
         </header>
 
 
 
-        <!-- ===============================
-        Search & Filters Section
-        =============================== -->
-        <main class="cartable-services">
-            <div class="container px-0">
-                <div class="cartable-desktop-layout">
 
+        <!-- Main Content -->
+        <main>
+            <div class="container px-0">
+                <div class="cartable-layout">
                     <div class="main-content">
+
+
+
+                        <!-- Header for Styling (Shows on Desktop Mode Only)-->
                         <div class="head-line">
                             <span class="head-line-1st">
                                 <div class="head-line-text-1st">گزارش درخواست‌های من</div>
@@ -86,20 +89,29 @@
                                 </svg>
                             </span>
                         </div>
+
+
+
+
+                        <!-- Search & Filters Section -->
                         <div class="content-box">
                             <section class="cartable-search">
                                 <div class="container debug-cols">
                                     <div class="row">
                                         <div class="col-12">
+
+                                            <!-- Title -->
                                             <h1 class="cartable-search-title">
                                                 دنبال چه خدمتی می‌گردید؟
                                             </h1>
-                                            <div class="search-area take-grid lg-grid-3">
+
+                                            <!-- Search Inputs -->
+                                            <div class="search-are take-grid lg-grid-3">
                                                 <div class="search-inputs take-grid md-grid-2 ">
-                                                    <!-- Search Input -->
+
+                                                    <!-- Search by Name Input -->
                                                     <div class="cartable-field-group ">
                                                         <div class="input-group cartable-input">
-
                                                             <!-- Leading Icon -->
                                                             <span class="input-group-text" aria-hidden="true">
                                                                 <!-- Search Icon -->
@@ -110,23 +122,19 @@
                                                                     <path d="M18.5 18.5L22 22" stroke="#685870"
                                                                         stroke-width="1.5" stroke-linecap="round" />
                                                                 </svg>
-
                                                             </span>
-
                                                             <input type="text" class="form-control"
                                                                 placeholder="عنوان یا نام خدمت …"
                                                                 aria-label="عنوان یا نام خدمت" />
                                                         </div>
                                                     </div>
 
-                                                    <!-- Organization Dropdown (Bootstrap-based) -->
+                                                    <!-- Organization Dropdown -->
                                                     <div class="cartable-field-group">
                                                         <div class="dropdown cartable-dropdown">
-
                                                             <button class="cartable-dropdown-trigger dropdown-toggle"
                                                                 type="button" data-bs-toggle="dropdown"
                                                                 aria-expanded="false">
-
                                                                 <!-- Leading Icon -->
                                                                 <span class="cartable-icon">
                                                                     <svg width="20" height="20" viewBox="0 0 24 24"
@@ -149,7 +157,6 @@
                                                                             stroke-width="1.5" stroke-linecap="round" />
                                                                     </svg>
                                                                 </span>
-
                                                                 <span class="dropdown-text">
                                                                     انتخاب اداره یا سازمان
                                                                 </span>
@@ -163,9 +170,9 @@
                                                                             stroke-linejoin="round" />
                                                                     </svg>
                                                                 </span>
-
                                                             </button>
 
+                                                            <!-- Selecting List -->
                                                             <ul class="dropdown-menu cartable-dropdown-menu">
                                                                 <li>
                                                                     <button class="dropdown-item" data-value="1">
@@ -188,25 +195,26 @@
                                                                     </button>
                                                                 </li>
                                                             </ul>
-
                                                             <input type="hidden" name="organization">
                                                         </div>
                                                     </div>
-
                                                 </div>
 
-                                                <!-- Search Button -->
+
+                                                <!-- Do Search Button -->
                                                 <div class="cartable-field-group">
                                                     <button type="button" class="btn cartable-search-btn w-100">
                                                         جستجوی خدمت
                                                     </button>
                                                 </div>
                                             </div>
-                                            <!-- Filters -->
+
+
+                                            <!-- Chips Filters -->
                                             <ul class="cartable-filter-list">
                                                 <li class="cartable-filter-chip ">
                                                     <span class="chip-icon">
-                                                        <!-- SVG ICON (16x16) -->
+                                                        <!-- Leading Icon -->
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -228,7 +236,6 @@
                                                                 d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">دانشجویان</span>
                                                 </li>
@@ -241,7 +248,6 @@
                                                                 d="M15 2H17C18.8856 2 19.8284 2 20.4142 2.58579C21 3.17157 21 4.11438 21 6V21.25H22C22.4142 21.25 22.75 21.5858 22.75 22C22.75 22.4142 22.4142 22.75 22 22.75H2C1.58579 22.75 1.25 22.4142 1.25 22C1.25 21.5858 1.58579 21.25 2 21.25H3V9C3 7.11438 3 6.17157 3.58579 5.58579C4.17157 5 5.11438 5 7 5H11C12.8856 5 13.8284 5 14.4142 5.58579C15 6.17157 15 7.11438 15 9V21.25H16.5V9L16.5 8.91051C16.5001 8.04488 16.5002 7.25121 16.4134 6.60559C16.3178 5.89462 16.0929 5.14317 15.4749 4.52513C14.8568 3.90708 14.1054 3.68219 13.3944 3.5866C12.7579 3.50102 11.9774 3.49991 11.126 3.49999C11.2103 3.11275 11.351 2.82059 11.5858 2.58579C12.1716 2 13.1144 2 15 2ZM5.25 8C5.25 7.58579 5.58579 7.25 6 7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H6C5.58579 8.75 5.25 8.41421 5.25 8ZM5.25 11C5.25 10.5858 5.58579 10.25 6 10.25H12C12.4142 10.25 12.75 10.5858 12.75 11C12.75 11.4142 12.4142 11.75 12 11.75H6C5.58579 11.75 5.25 11.4142 5.25 11ZM5.25 14C5.25 13.5858 5.58579 13.25 6 13.25H12C12.4142 13.25 12.75 13.5858 12.75 14C12.75 14.4142 12.4142 14.75 12 14.75H6C5.58579 14.75 5.25 14.4142 5.25 14ZM9 18.25C9.41421 18.25 9.75 18.5858 9.75 19V21.25H8.25V19C8.25 18.5858 8.58579 18.25 9 18.25Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">دانشگاه‌ها</span>
                                                 </li>
@@ -266,10 +272,10 @@
                                                                 d="M13.1825 20.343L14.2629 21.413C14.5869 21.7326 14.749 21.8924 14.8862 21.9477C15.1989 22.0737 15.5457 21.9659 15.7102 21.6915C15.7824 21.5711 15.8049 21.354 15.8499 20.9197C15.8753 20.6745 15.888 20.5519 15.9265 20.4492C16.0129 20.2193 16.1942 20.0405 16.4273 19.9554C16.5315 19.9173 16.6558 19.9048 16.9045 19.8798C17.3449 19.8354 17.5651 19.8132 17.6872 19.7421C17.9654 19.5799 18.0747 19.2378 17.9469 18.9295C17.8909 18.7942 17.7288 18.6344 17.4048 18.3148L16.3243 17.2494C15.8908 18.7524 14.6949 19.9322 13.1825 20.343Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">مدارک تحصیلی</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -281,11 +287,10 @@
                                                                 d="M19.3517 7.61665L15.3929 4.05375C14.2651 3.03868 13.7012 2.53114 13.0092 2.26562L13 5.00011C13 7.35713 13 8.53564 13.7322 9.26787C14.4645 10.0001 15.643 10.0001 18 10.0001H21.5801C21.2175 9.29588 20.5684 8.71164 19.3517 7.61665Z"
                                                                 fill="#685870" />
                                                         </svg>
-
-
                                                     </span>
                                                     <span class="chip-text">پذیرشی</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -297,10 +302,10 @@
                                                                 d="M12.7502 20.3925C13.0531 20.3257 13.3485 20.218 13.6276 20.0692C14.6271 19.5365 15.9185 18.9187 17 18.6334C17.8767 18.402 19.0157 18.2835 19.9851 18.2228C21.094 18.1535 22 17.2546 22 16.1436V4.93319C22 3.86075 21.1538 2.98041 20.082 3.01775C18.9534 3.05706 17.5469 3.17403 16.5 3.48744C15.5924 3.75916 14.5353 4.30418 13.6738 4.80275C13.3824 4.97142 13.0709 5.0953 12.7502 5.17387V20.3925ZM19.1821 9.72761C19.5839 9.62715 19.8282 9.21994 19.7278 8.8181C19.6273 8.41625 19.2201 8.17193 18.8183 8.27239L14.8183 9.27239C14.4164 9.37285 14.1721 9.78006 14.2726 10.1819C14.373 10.5837 14.7802 10.8281 15.1821 10.7276L19.1821 9.72761ZM19.1821 13.7276C19.5839 13.6271 19.8282 13.2199 19.7278 12.8181C19.6273 12.4163 19.2201 12.1719 18.8183 12.2724L14.8183 13.2724C14.4164 13.3729 14.1721 13.7801 14.2726 14.1819C14.373 14.5837 14.7802 14.8281 15.1821 14.7276L19.1821 13.7276Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">آموزشی</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -315,10 +320,10 @@
                                                                 d="M15.5 13.25C15.9142 13.25 16.25 13.5858 16.25 14V18.1893L16.9697 17.4697C17.2626 17.1768 17.7374 17.1768 18.0303 17.4697C18.3232 17.7626 18.3232 18.2374 18.0303 18.5303L16.0303 20.5303C15.7374 20.8232 15.2626 20.8232 14.9697 20.5303L12.9697 18.5303C12.6768 18.2374 12.6768 17.7626 12.9697 17.4697C13.2626 17.1768 13.7374 17.1768 14.0303 17.4697L14.75 18.1893V14C14.75 13.5858 15.0858 13.25 15.5 13.25ZM19.4697 13.4697C19.7626 13.1768 20.2374 13.1768 20.5303 13.4697L22.5303 15.4697C22.8232 15.7626 22.8232 16.2374 22.5303 16.5303C22.2374 16.8232 21.7626 16.8232 21.4697 16.5303L20.75 15.8107V20C20.75 20.4142 20.4142 20.75 20 20.75C19.5858 20.75 19.25 20.4142 19.25 20V15.8107L18.5303 16.5303C18.2374 16.8232 17.7626 16.8232 17.4697 16.5303C17.1768 16.2374 17.1768 15.7626 17.4697 15.4697L19.4697 13.4697Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">مالی</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -327,10 +332,10 @@
                                                                 d="M8.96173 18.4687C6.01943 16.2137 2 12.4886 2 8.96653C2 3.08262 7.50016 0.885859 12 5.43111C16.4998 0.885859 22 3.08262 22 8.9665C22 12.4887 17.9806 16.2137 15.0383 18.4687C13.7063 19.4896 13.0403 20 12 20C10.9597 20 10.2937 19.4896 8.96173 18.4687ZM16.5 6.25C16.9142 6.25 17.25 6.58579 17.25 7V8.25002H18.5C18.9142 8.25002 19.25 8.5858 19.25 9.00002C19.25 9.41423 18.9142 9.75002 18.5 9.75002H17.25V11C17.25 11.4142 16.9142 11.75 16.5 11.75C16.0858 11.75 15.75 11.4142 15.75 11V9.75002L14.5 9.75002C14.0858 9.75002 13.75 9.41423 13.75 9.00002C13.75 8.5858 14.0858 8.25002 14.5 8.25002H15.75V7C15.75 6.58579 16.0858 6.25 16.5 6.25Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">سلامت</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon"><svg width="24" height="24"
                                                             viewBox="0 0 24 24" fill="none"
@@ -351,6 +356,7 @@
                                                     </span>
                                                     <span class="chip-text">غیر دانشجویی</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon">
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -371,10 +377,10 @@
                                                                 d="M16.669 15.6739C16.4501 16.8413 16.1267 17.9171 15.7104 18.8368C15.2966 19.7512 14.7849 20.5247 14.1793 21.0789C13.5708 21.6358 12.831 22 12.0001 22C17.2707 22 21.5889 17.9226 21.9724 12.75H16.9868C16.9512 13.7515 16.8445 14.7381 16.669 15.6739Z"
                                                                 fill="#685870" />
                                                         </svg>
-
                                                     </span>
                                                     <span class="chip-text">زبان</span>
                                                 </li>
+
                                                 <li class="cartable-filter-chip">
                                                     <span class="chip-icon"><svg width="24" height="24"
                                                             viewBox="0 0 24 24" fill="none"
@@ -389,8 +395,6 @@
                                                                 d="M21 12C21 13.1046 20.1046 14 19 14C17.8954 14 17 13.1046 17 12C17 10.8954 17.8954 10 19 10C20.1046 10 21 10.8954 21 12Z"
                                                                 fill="#685870" />
                                                         </svg></span>
-
-
                                                     <span class="chip-text">سایر</span>
                                                 </li>
                                             </ul>
@@ -400,6 +404,9 @@
                                     </div>
                                 </div>
                             </section>
+
+
+                            <!-- Search Result Bar -->
 
                             <div class="search-result-bar">
                                 <!-- Left Item -->
@@ -423,7 +430,6 @@
                                         </svg>
                                     </span>
                                     <span class="result-text">۲۴ خدمت</span>
-
                                 </div>
 
                                 <!-- Divider -->
@@ -444,30 +450,27 @@
                                             <path d="M17 4L17 20L20 16" stroke="#685870" stroke-width="1.5"
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-
                                     </span>
                                     <span class="result-text">مرتبط‌ترین</span>
                                 </div>
-
                             </div>
 
 
 
-                            <!-- ===============================
-                           Service Cards
-                         ================================ -->
+
+                            <!-- Service Cards -->
 
                             <div class="container debug-cols">
                                 <div class="row">
-
                                     <div class="cards take-grid md-grid-2 lg-grid-3 col-12">
+
+
+                                        <!-- First Card -->
                                         <div class="service-card">
 
-                                            <!-- Right Category Box -->
+                                            <!-- Category Box -->
                                             <div class="service-card-category">
-
                                                 <span class="category-icon">
-
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path
@@ -478,27 +481,21 @@
                                                             fill="#685870" />
                                                     </svg>
                                                 </span>
-
                                                 <span class="category-line"></span>
-
                                                 <span class="category-title">
                                                     دانشجویی
                                                 </span>
-
                                                 <span class="category-line"></span>
-
                                             </div>
 
-                                            <!-- Left Content Box -->
+                                            <!-- Content Box -->
                                             <div class="service-card-content">
-
                                                 <h2 class="service-title">
                                                     صدور گواهی اشتغال به تحصیل برای داخل کشور
                                                 </h2>
 
                                                 <!-- Bottom Area -->
                                                 <div class="service-card-footer">
-
                                                     <ul class="service-meta">
                                                         <li>
                                                             <span class="meta-icon">
@@ -510,7 +507,6 @@
                                                                         stroke-width="1.5" stroke-linecap="round"
                                                                         stroke-linejoin="round" />
                                                                 </svg>
-
                                                             </span>
                                                             <span class="meta-label">زمان پردازش:</span>
                                                             <span class="meta-value">۳ تا ۴ هفته</span>
@@ -537,537 +533,26 @@
                                                         </li>
                                                     </ul>
 
+                                                    <!-- Action Buttons -->
                                                     <div class="service-actions">
                                                         <button class="btn-secondary">مشاهده جزئیات</button>
                                                         <button class="btn-primary">ثبت درخواست</button>
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
-
 
                                         </div>
 
-                                        <div class="service-card">
-
-                                            <!-- Right Category Box -->
-                                            <div class="service-card-category">
-
-                                                <span class="category-icon">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14.2172 3.49965C12.7962 2.83345 11.2037 2.83345 9.78272 3.49965L3.0916 6.63659C2.0156 7.14105 1.73507 8.56352 2.25 9.54666L2.25 14.5C2.25 14.9142 2.58579 15.25 3 15.25C3.41421 15.25 3.75 14.9142 3.75 14.5V10.672L9.78281 13.5003C11.2038 14.1665 12.7963 14.1665 14.2173 13.5003L20.9084 10.3634C22.3639 9.68105 22.3639 7.31899 20.9084 6.63664L14.2172 3.49965Z"
-                                                            fill="#685870" />
-                                                        <path
-                                                            d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
-                                                            fill="#685870" />
-                                                    </svg>
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                                <span class="category-title">
-                                                    دانشجویی
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                            </div>
-
-                                            <!-- Left Content Box -->
-                                            <div class="service-card-content">
-
-                                                <h2 class="service-title">
-                                                    صدور گواهی اشتغال به تحصیل برای داخل کشور
-                                                </h2>
-
-                                                <!-- Bottom Area -->
-                                                <div class="service-card-footer">
-
-                                                    <ul class="service-meta">
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle cx="12" cy="12" r="10" stroke="#685870"
-                                                                        stroke-width="1.5" />
-                                                                    <path d="M12 8V12L14.5 14.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">زمان پردازش:</span>
-                                                            <span class="meta-value">۳ تا ۴ هفته</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-                                                                        stroke="#685870" stroke-width="1.5" />
-                                                                    <path d="M10 16H6" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M14 16H12.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M2 10L22 10" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">هزینه خدمت:</span>
-                                                            <span class="meta-value">۵۰٬۰۰۰ تومان</span>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="service-actions">
-                                                        <button class="btn-secondary">مشاهده جزئیات</button>
-                                                        <button class="btn-primary">ثبت درخواست</button>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-                                        <div class="service-card">
-
-                                            <!-- Right Category Box -->
-                                            <div class="service-card-category">
-
-                                                <span class="category-icon">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14.2172 3.49965C12.7962 2.83345 11.2037 2.83345 9.78272 3.49965L3.0916 6.63659C2.0156 7.14105 1.73507 8.56352 2.25 9.54666L2.25 14.5C2.25 14.9142 2.58579 15.25 3 15.25C3.41421 15.25 3.75 14.9142 3.75 14.5V10.672L9.78281 13.5003C11.2038 14.1665 12.7963 14.1665 14.2173 13.5003L20.9084 10.3634C22.3639 9.68105 22.3639 7.31899 20.9084 6.63664L14.2172 3.49965Z"
-                                                            fill="#685870" />
-                                                        <path
-                                                            d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
-                                                            fill="#685870" />
-                                                    </svg>
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                                <span class="category-title">
-                                                    دانشجویی
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                            </div>
-
-                                            <!-- Left Content Box -->
-                                            <div class="service-card-content">
-
-                                                <h2 class="service-title">
-                                                    صدور گواهی اشتغال به تحصیل برای داخل کشور
-                                                </h2>
-
-                                                <!-- Bottom Area -->
-                                                <div class="service-card-footer">
-
-                                                    <ul class="service-meta">
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle cx="12" cy="12" r="10" stroke="#685870"
-                                                                        stroke-width="1.5" />
-                                                                    <path d="M12 8V12L14.5 14.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">زمان پردازش:</span>
-                                                            <span class="meta-value">۳ تا ۴ هفته</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-                                                                        stroke="#685870" stroke-width="1.5" />
-                                                                    <path d="M10 16H6" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M14 16H12.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M2 10L22 10" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">هزینه خدمت:</span>
-                                                            <span class="meta-value">۵۰٬۰۰۰ تومان</span>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="service-actions">
-                                                        <button class="btn-secondary">مشاهده جزئیات</button>
-                                                        <button class="btn-primary">ثبت درخواست</button>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                        <div class="service-card">
-
-                                            <!-- Right Category Box -->
-                                            <div class="service-card-category">
-
-                                                <span class="category-icon">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14.2172 3.49965C12.7962 2.83345 11.2037 2.83345 9.78272 3.49965L3.0916 6.63659C2.0156 7.14105 1.73507 8.56352 2.25 9.54666L2.25 14.5C2.25 14.9142 2.58579 15.25 3 15.25C3.41421 15.25 3.75 14.9142 3.75 14.5V10.672L9.78281 13.5003C11.2038 14.1665 12.7963 14.1665 14.2173 13.5003L20.9084 10.3634C22.3639 9.68105 22.3639 7.31899 20.9084 6.63664L14.2172 3.49965Z"
-                                                            fill="#685870" />
-                                                        <path
-                                                            d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
-                                                            fill="#685870" />
-                                                    </svg>
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                                <span class="category-title">
-                                                    دانشجویی
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                            </div>
-
-                                            <!-- Left Content Box -->
-                                            <div class="service-card-content">
-
-                                                <h2 class="service-title">
-                                                    صدور گواهی اشتغال به تحصیل برای داخل کشور
-                                                </h2>
-
-                                                <!-- Bottom Area -->
-                                                <div class="service-card-footer">
-
-                                                    <ul class="service-meta">
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle cx="12" cy="12" r="10" stroke="#685870"
-                                                                        stroke-width="1.5" />
-                                                                    <path d="M12 8V12L14.5 14.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">زمان پردازش:</span>
-                                                            <span class="meta-value">۳ تا ۴ هفته</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-                                                                        stroke="#685870" stroke-width="1.5" />
-                                                                    <path d="M10 16H6" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M14 16H12.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M2 10L22 10" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">هزینه خدمت:</span>
-                                                            <span class="meta-value">۵۰٬۰۰۰ تومان</span>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="service-actions">
-                                                        <button class="btn-secondary">مشاهده جزئیات</button>
-                                                        <button class="btn-primary">ثبت درخواست</button>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                        <div class="service-card">
-
-                                            <!-- Right Category Box -->
-                                            <div class="service-card-category">
-
-                                                <span class="category-icon">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14.2172 3.49965C12.7962 2.83345 11.2037 2.83345 9.78272 3.49965L3.0916 6.63659C2.0156 7.14105 1.73507 8.56352 2.25 9.54666L2.25 14.5C2.25 14.9142 2.58579 15.25 3 15.25C3.41421 15.25 3.75 14.9142 3.75 14.5V10.672L9.78281 13.5003C11.2038 14.1665 12.7963 14.1665 14.2173 13.5003L20.9084 10.3634C22.3639 9.68105 22.3639 7.31899 20.9084 6.63664L14.2172 3.49965Z"
-                                                            fill="#685870" />
-                                                        <path
-                                                            d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
-                                                            fill="#685870" />
-                                                    </svg>
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                                <span class="category-title">
-                                                    دانشجویی
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                            </div>
-
-                                            <!-- Left Content Box -->
-                                            <div class="service-card-content">
-
-                                                <h2 class="service-title">
-                                                    صدور گواهی اشتغال به تحصیل برای داخل کشور
-                                                </h2>
-
-                                                <!-- Bottom Area -->
-                                                <div class="service-card-footer">
-
-                                                    <ul class="service-meta">
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle cx="12" cy="12" r="10" stroke="#685870"
-                                                                        stroke-width="1.5" />
-                                                                    <path d="M12 8V12L14.5 14.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">زمان پردازش:</span>
-                                                            <span class="meta-value">۳ تا ۴ هفته</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-                                                                        stroke="#685870" stroke-width="1.5" />
-                                                                    <path d="M10 16H6" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M14 16H12.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M2 10L22 10" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">هزینه خدمت:</span>
-                                                            <span class="meta-value">۵۰٬۰۰۰ تومان</span>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="service-actions">
-                                                        <button class="btn-secondary">مشاهده جزئیات</button>
-                                                        <button class="btn-primary">ثبت درخواست</button>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-                                        </div>
-
-
-                                        <div class="service-card">
-
-                                            <!-- Right Category Box -->
-                                            <div class="service-card-category">
-
-                                                <span class="category-icon">
-
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M14.2172 3.49965C12.7962 2.83345 11.2037 2.83345 9.78272 3.49965L3.0916 6.63659C2.0156 7.14105 1.73507 8.56352 2.25 9.54666L2.25 14.5C2.25 14.9142 2.58579 15.25 3 15.25C3.41421 15.25 3.75 14.9142 3.75 14.5V10.672L9.78281 13.5003C11.2038 14.1665 12.7963 14.1665 14.2173 13.5003L20.9084 10.3634C22.3639 9.68105 22.3639 7.31899 20.9084 6.63664L14.2172 3.49965Z"
-                                                            fill="#685870" />
-                                                        <path
-                                                            d="M5 12.9147V16.6254C5 17.6334 5.5035 18.5772 6.38533 19.0656C7.8537 19.8787 10.204 21 12 21C13.796 21 16.1463 19.8787 17.6147 19.0656C18.4965 18.5772 19 17.6334 19 16.6254V12.9148L14.854 14.8585C13.0296 15.7138 10.9705 15.7138 9.14607 14.8585L5 12.9147Z"
-                                                            fill="#685870" />
-                                                    </svg>
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                                <span class="category-title">
-                                                    دانشجویی
-                                                </span>
-
-                                                <span class="category-line"></span>
-
-                                            </div>
-
-                                            <!-- Left Content Box -->
-                                            <div class="service-card-content">
-
-                                                <h2 class="service-title">
-                                                    صدور گواهی اشتغال به تحصیل برای داخل کشور
-                                                </h2>
-
-                                                <!-- Bottom Area -->
-                                                <div class="service-card-footer">
-
-                                                    <ul class="service-meta">
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle cx="12" cy="12" r="10" stroke="#685870"
-                                                                        stroke-width="1.5" />
-                                                                    <path d="M12 8V12L14.5 14.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">زمان پردازش:</span>
-                                                            <span class="meta-value">۳ تا ۴ هفته</span>
-                                                        </li>
-
-                                                        <li>
-                                                            <span class="meta-icon">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z"
-                                                                        stroke="#685870" stroke-width="1.5" />
-                                                                    <path d="M10 16H6" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M14 16H12.5" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                    <path d="M2 10L22 10" stroke="#685870"
-                                                                        stroke-width="1.5" stroke-linecap="round" />
-                                                                </svg>
-
-                                                            </span>
-                                                            <span class="meta-label">هزینه خدمت:</span>
-                                                            <span class="meta-value">۵۰٬۰۰۰ تومان</span>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="service-actions">
-                                                        <button class="btn-secondary">مشاهده جزئیات</button>
-                                                        <button class="btn-primary">ثبت درخواست</button>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-
-                                        </div>
+                                        <!-- You Can Copy & Place More Cards Here -->
 
                                     </div>
-
                                 </div>
-                                <div class="pagination-wrapper">
-                                    <ul class="pagination">
-
-                                        <!-- Right side (First / Prev) -->
-                                        <li class="page-item">
-                                            <button class="page-btn">
-                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-
-                                            </button>
-                                        </li>
-                                        <li class="page-item">
-                                            <button class="page-btn">۱</button>
-                                        </li>
-                                        <li class="page-item dots">…</li>
-
-                                        <!-- Center pages -->
-                                        <li class="page-item">
-                                            <button class="page-btn">۴</button>
-                                        </li>
-                                        <li class="page-item">
-                                            <button class="page-btn">۵</button>
-                                        </li>
-                                        <li class="page-item active">
-                                            <button class="page-btn">۶</button>
-                                        </li>
-                                        <li class="page-item">
-                                            <button class="page-btn">۷</button>
-                                        </li>
-                                        <li class="page-item">
-                                            <button class="page-btn">۸</button>
-                                        </li>
-
-                                        <!-- Left side (Next / Last) -->
-                                        <li class="page-item dots">…</li>
-                                        <li class="page-item">
-                                            <button class="page-btn">۱۲</button>
-                                        </li>
-                                        <li class="page-item">
-                                            <button class="page-btn">
-                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-
-                                            </button>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
                             </div>
                         </div>
                     </div>
-                    <!-- ===============================
-                    Bottom Navigation (Mobile)
-                    ================================ -->
+
+
+                    <!-- Navigation Section -->
                     <nav class="bottom-nav">
                         <ul class="bottom-nav-list">
 
@@ -1083,8 +568,6 @@
                                 </span>
                                 <span class="nav-label">پروفایل</span>
                             </li>
-
-
 
                             <li class="bottom-nav-item">
                                 <span class="icon-box">
@@ -1107,10 +590,10 @@
                                             d="M5 11V7.5C5 6.67157 5.67157 6 6.5 6H17.5C18.3284 6 19 6.67157 19 7.5V11"
                                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
-
                                 </span>
                                 <span class="nav-label">میز خدمت</span>
                             </li>
+
                             <li class="bottom-nav-item ">
                                 <span class="icon-box">
                                     <!-- folder icon -->
@@ -1125,10 +608,10 @@
                                             d="M2 6.94975C2 6.06722 2 5.62595 2.06935 5.25839C2.37464 3.64031 3.64031 2.37464 5.25839 2.06935C5.62595 2 6.06722 2 6.94975 2C7.33642 2 7.52976 2 7.71557 2.01738C8.51665 2.09229 9.27652 2.40704 9.89594 2.92051C10.0396 3.03961 10.1763 3.17633 10.4497 3.44975L11 4C11.8158 4.81578 12.2237 5.22367 12.7121 5.49543C12.9804 5.64471 13.2651 5.7626 13.5604 5.84678C14.0979 6 14.6747 6 15.8284 6H16.2021C18.8345 6 20.1506 6 21.0062 6.76946C21.0849 6.84024 21.1598 6.91514 21.2305 6.99383C22 7.84935 22 9.16554 22 11.7979V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V6.94975Z"
                                             stroke="currentColor" stroke-width="1.5" />
                                     </svg>
-
                                 </span>
                                 <span class="nav-label">کارتابل</span>
                             </li>
+
                             <li class="bottom-nav-item active">
                                 <span class="icon-box">
                                     <!-- plus icon -->
@@ -1140,7 +623,6 @@
                                         <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" stroke="currentColor"
                                             stroke-width="1.5" stroke-linecap="round" />
                                     </svg>
-
                                 </span>
                                 <span class="nav-label">ثبت درخواست</span>
                             </li>
@@ -1166,6 +648,10 @@
         </main>
 
 
+
+
+        <!-- Need Support Button  -->
+
         <div class="support-fab">
             <button class="support-btn" aria-label="پشتیبانی">
                 <span class="support-icon">
@@ -1177,17 +663,14 @@
                             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
                             stroke="currentColor" stroke-width="1.5" />
                     </svg>
-
                 </span>
                 <span class="support-text">پشتیبانی نیاز دارید؟</span>
-
             </button>
         </div>
 
-    </div>
-    </div>
 
-
+    </div>
+    <!-- </div> -->
 
 
     <!-- Scripts -->
