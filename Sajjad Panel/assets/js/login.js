@@ -1,12 +1,12 @@
 /**
  * =========================================================
- * Login Page – Client Side Interactions
+ * Login Page 
  * =========================================================*/
 
 document.addEventListener('DOMContentLoaded', () => {
 
     /* =======================================================
-       Global Click Delegation
+       Click Delegation
        ======================================================= */
 
     document.addEventListener('click', (event) => {
