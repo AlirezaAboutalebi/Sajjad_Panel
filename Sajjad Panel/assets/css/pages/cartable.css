@@ -385,7 +385,6 @@
     border-radius: 8px;
     overflow: hidden;
     height: 180px;
-    margin-bottom: 16px;
 }
 
 /* Card Right Side */
@@ -656,9 +655,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .service-card {
-        margin-bottom: 0;
-    }
+
 
     .cards {
         margin-bottom: 16px;
@@ -669,9 +666,6 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
 
-    .service-card {
-        margin-bottom: 0;
-    }
 
     .cards {
         margin-bottom: 16px;
@@ -785,10 +779,6 @@
         height: calc(100vh - 124px);
     }
 
-    .service-card {
-        margin-bottom: 0;
-    }
-
     .cards {
         margin-bottom: 16px;
     }
@@ -849,7 +839,7 @@
 
     /* for now */
     .nav-label {
-        display: none; 
+        display: none;
         line-height: 1;
     }
 
@@ -857,7 +847,7 @@
         background-color: #2560A6;
         color: #EBECF0;
     }
-    
+
 
     .support-fab {
         position: fixed;
