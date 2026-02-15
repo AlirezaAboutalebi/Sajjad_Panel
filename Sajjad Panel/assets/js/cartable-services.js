@@ -60,7 +60,7 @@ const services = [
     {
         categoryKey: "education",
         category: "تحصیلی",
-        title: "صدور گواهی اشتغال به تحصیل برای خارج کشور",
+        title: "ثبت نام در آزمون زبان MSRT",
         time: "۲ هفته",
         price: "۸۰٬۰۰۰ تومان"
     },
@@ -74,15 +74,15 @@ const services = [
     {
         categoryKey: "education",
         category: "تحصیلی",
-        title: "صدور گواهی اشتغال به تحصیل برای خارج کشور",
+        title: "صدور خروج مراجعت و خروج قطعی",
         time: "۲ هفته",
         price: "۸۰٬۰۰۰ تومان"
     },
     {
         categoryKey: "student",
         category: "دانشجویی",
-        title: "ترجمه رسمی مدارک",
-        time: "۱ هفته",
+        title: "پایش سلامت دانشجویان",
+        time: "۴ روز",
         price: "۱۲۰٬۰۰۰ تومان"
     }
 ];
