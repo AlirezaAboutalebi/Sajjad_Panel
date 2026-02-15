@@ -210,12 +210,6 @@
 }
 
 /* ===============================
-    Data Table
-================================ */
-
-.data {}
-
-/* ===============================
     Navigation
 ================================ */
 
@@ -330,17 +324,227 @@
 }
 
 
+
 /* ===============================
     Responsive
 ================================ */
 
-@media (min-width: 768px) and (max-width: 991px) {
 
 
+@media (max-width: 991px) {
 
-    .cards {
-        margin-bottom: 16px;
+    /* ===============================
+    Data Table (Mobile Default)
+    ================================ */
+
+    .reports .container {
+        padding: 0;
     }
+
+    .data-box {
+        background-color: #E8E9ED;
+        width: 100%;
+    }
+
+
+    /* ===============================
+    Header (Hidden on Mobile)
+    ================================ */
+
+    .reports-header {
+        display: none;
+    }
+
+
+    /* ===============================
+        Rows (Card Style)
+    ================================ */
+
+    .reports-row {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 8px 16px !important;
+        padding: 16px !important;
+        border-radius: 12px;
+        border: 1px solid #AE93BD;
+    }
+
+    .reports-row {
+        background-color: #E6E7EB;
+    }
+
+
+    .reports-row:nth-of-type(odd) {
+        background-color: #EBECF0;
+    }
+
+
+    .reports-row:hover {
+        background-color: #E3E4E8;
+    }
+
+    /* ===============================
+        Columns Base
+    ================================ */
+
+    .reports-row li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 13px;
+        min-width: 0;
+    }
+
+
+    /* ---------- Row Layout (Mobile) ---------- */
+
+    /* سطر اول */
+    .col-id {
+        flex: 0 0 24px;
+        order: 1;
+        font-weight: 600;
+        padding-right: 8px;
+    }
+
+    .col-title {
+        flex: 0 0 calc(100% - 112px);
+        order: 2;
+        min-width: 0;
+    }
+
+    /* سطر دوم */
+    .col-message {
+        flex: 0 0 32px;
+        order: 3;
+    }
+
+    .col-file {
+        flex: 0 0 32px;
+        order: 4;
+    }
+
+    /* سطر سوم */
+    .col-status {
+        flex: 0 0 50%;
+        order: 5;
+        margin-top: 12px;
+    }
+
+    .col-more {
+        flex: 0 0 50%;
+        order: 6;
+        margin-top: 12px;
+        justify-content: flex-end !important;
+    }
+
+    /* شماره پیگیری در موبایل مخفی */
+    .col-track,
+    .file-text,
+    .massage-text {
+        display: none !important;
+    }
+
+
+    /* ===============================
+        Ellipsis
+================================ */
+
+    .text-ellipsis {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+    /* ===============================
+        Status Badge
+================================ */
+
+    .status-badge {
+        padding: 4px 16px;
+        border-radius: 64px;
+        font-size: 12px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .status-badge.reviewing {
+        background-color: rgba(37, 96, 166, 0.1);
+        border: 1px solid #2560A6;
+    }
+
+    .status-badge.done {
+        background-color: rgba(8, 161, 136, 0.1);
+        border: 1px solid #08A188;
+    }
+
+    .status-badge.rejected {
+        background-color: rgba(201, 44, 57, 0.1);
+        border: 1px solid #C92C39;
+    }
+
+    .status-badge.revision {
+        background-color: rgba(232, 151, 21, 0.1);
+        border: 1px solid #E89715;
+    }
+
+
+    /* ===============================
+        Message & File
+================================ */
+    .text-ellipsis {
+        color: #0F111A;
+        font-weight: 500;
+    }
+
+    .col-message,
+    .col-file,
+    .col-more {
+        gap: 6px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .has-message,
+    .has-file {
+        background-color: #2560A6 !important;
+        color: #EBECF0;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .no-message,
+    .no-file {
+        color: #9CA3AF;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .col-message,
+    .col-file {
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        width: 32px;
+        height: 32px;
+        margin: 0 6px;
+        border-radius: 6px;
+        background-color: #E3E4E8;
+        padding: 0;
+    }
+
+    .col-message svg,
+    .col-file svg,
+    .col-more svg {
+        width: 20px;
+        height: 20px;
+    }
+
 
 }
 
@@ -348,9 +552,257 @@
 
 
 
-    .cards {
-        margin-bottom: 16px;
+    /* ===============================
+        Data Table
+    ================================ */
+
+    .reports .container {
+        padding: 0;
+        overflow: hidden;
     }
+
+    .data-box {
+        background-color: #E6E7EB;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* ===============================
+        Header & Rows
+    ================================ */
+
+    .reports-header,
+    .reports-row {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 72px;
+        padding: 0 4px !important;
+    }
+
+
+    /* ===============================
+        Header
+    ================================ */
+
+    .reports-header {
+        background-color: #E8E9ED;
+        height: 32px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #685870;
+        border-bottom: 1px solid #AE93BD;
+    }
+
+    /* ===============================
+        Rows
+    ================================ */
+
+
+    .reports-row {
+        background-color: #E6E7EB;
+    }
+
+
+    .reports-row:nth-of-type(odd) {
+        background-color: #EBECF0;
+    }
+
+
+    .reports-row:hover {
+        background-color: #E3E4E8;
+    }
+
+    /* ===============================
+        Columns (Percent Based)
+    ================================ */
+
+    .reports-header li,
+    .reports-row li {
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        min-width: 0;
+        font-size: 13px;
+    }
+
+    /* width control */
+
+    .col-id {
+        flex: 0 0 6%;
+        order: 1;
+    }
+
+    .col-title {
+        flex: 0 0 25%;
+        order: 2;
+    }
+
+    .col-track {
+        flex: 0 0 12%;
+        order: 3;
+    }
+
+    .col-status {
+        flex: 0 0 12%;
+        order: 4;
+    }
+
+    .col-message {
+        flex: 0 0 15%;
+        order: 5;
+    }
+
+    .col-file {
+        flex: 0 0 15%;
+        order: 6;
+    }
+
+    .col-more {
+        flex: 0 0 15%;
+        order: 7;
+    }
+
+
+    /* ===============================
+        Optional Improvements
+    ================================ */
+    .col-id {
+        color: #0F111A;
+    }
+
+    .col-title {
+        min-width: 0;
+
+    }
+
+    .text-ellipsis {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #0F111A;
+    }
+
+    .col-track {
+        color: #0F111A;
+    }
+
+    /* ===============================
+        Status Badge
+    ================================ */
+
+    .status-badge {
+        padding: 6px 16px;
+        border-radius: 64px;
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+
+    .status-badge .badge-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Status Variants */
+
+    .status-badge.reviewing {
+        background-color: rgba(37, 96, 166, 0.1);
+        border: 1px solid #2560A6;
+        color: #0F111A;
+    }
+
+    .status-badge.done {
+        background-color: rgba(8, 161, 136, 0.1);
+        border: 1px solid #08A188;
+        color: #0F111A;
+    }
+
+    .status-badge.rejected {
+        background-color: rgba(201, 44, 57, 0.1);
+        border: 1px solid #C92C39;
+        color: #0F111A;
+    }
+
+    .status-badge.revision {
+        background-color: rgba(232, 151, 21, 0.1);
+        border: 1px solid #E89715;
+        color: #0F111A;
+
+    }
+
+    /* ===============================
+        Message & File Columns
+    ================================ */
+
+    .col-message,
+    .col-file,
+    .col-more {
+        gap: 4px;
+        font-size: 13px;
+        cursor: pointer;
+        white-space: nowrap;
+
+    }
+
+    .col-message .massage-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .col-message .massage-text {
+        line-height: 100%;
+    }
+
+    .col-file .file-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .col-file .file-text {
+        line-height: 100%;
+    }
+
+    /* Active state */
+    .col-more .more-icon svg {
+        width: 16px;
+        height: 16px;
+        color: #0F111A;
+    }
+
+    .has-message,
+    .has-file {
+        color: #2560A6;
+        font-weight: 500;
+    }
+
+    /* Disabled state */
+
+    .no-message,
+    .no-file {
+        color: #9CA3AF;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    /* ===============================
+        Details Column
+    ================================ */
+
+    .col-more a {
+        color: #0F111A;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s ease;
+    }
+
+
 
 }
 
